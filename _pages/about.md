@@ -64,8 +64,8 @@ Zhen Zhang, Xinyu Wang, Yong Jiang, **Zhuo Chen**, Feiteng Mu, Mengting Hu, Peng
 
 
 # 📖 Educations
-- *2017-2021*, ShanghaiTech University, B.S. in Computer Science。
-- *2021-now*, ShanghaiTech University, Ph.D. advised by Kewei Tu.
+- *2017-2021*, ShanghaiTech University, B.S. in Computer Science.
+- *2021-now*, ShanghaiTech University, Ph.D. advised by Prof. Kewei Tu.
 
 
 <!-- 
