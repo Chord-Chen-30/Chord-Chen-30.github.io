@@ -28,6 +28,9 @@ My research focuses on Natural Language Processing (NLP). Recently, I'm doing re
 
 # 📝 Publications 
 
+- [Detecting Knowledge Boundary of Vision Large Language Models by Sampling-Based Inference](https://arxiv.org/abs/2502.18023).
+**Zhuo Chen**, Xinyu Wang, Yong Jiang, Zhen Zhang, Xinyu Geng, Pengjun Xie, Fei Huang, Kewei Tu. Preprint
+
 - [Improving Retrieval Augmented Open-Domain Question-Answering with Vectorized Contexts](https://aclanthology.org/2024.findings-acl.458/).
 **Zhuo Chen**, Xinyu Wang, Yong Jiang, Pengjun Xie, Fei Huang, Kewei Tu. In Findings of the Association for Computational Linguistics ACL 2024
 
