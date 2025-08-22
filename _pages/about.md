@@ -3,7 +3,7 @@ permalink: /
 title: ""
 excerpt: ""
 author_profile: true
-redirect_from: 
+redirect_from:
   - /about/
   - /about.html
 ---
@@ -19,23 +19,23 @@ redirect_from:
 
 Hi! I'm Zhuo Chen (陈卓), a Ph.D. student at ShanghaiTech University, supervised by Prof. Kewei Tu.
 
-My research focuses on Natural Language Processing (NLP). Recently, I'm doing reasearch related to (Multimodal) LLMs and RAG at Tongyi Lab, Alibaba.
+My research focuses on Natural Language Processing (NLP). Recently, I'm doing reasearch related to (Multimodal) LLMs, RAG and Continue Pre-train (CPT) towards `DeepResearch` of LLMs at Tongyi Lab, Alibaba.
 
-<!-- 
+<!--
 # 🔥 News
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.
 - *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
 
-# 📝 Publications 
+# 📝 Publications
 
 - [Detecting Knowledge Boundary of Vision Large Language Models by Sampling-Based Inference](https://arxiv.org/abs/2502.18023).
-**Zhuo Chen**, Xinyu Wang, Yong Jiang, Zhen Zhang, Xinyu Geng, Pengjun Xie, Fei Huang, Kewei Tu. Preprint
+**Zhuo Chen**, Xinyu Wang, Yong Jiang, Zhen Zhang, Xinyu Geng, Pengjun Xie, Fei Huang, Kewei Tu. In Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing
+
+- [KBM: Delineating Knowledge Boundary for Adaptive Retrieval in Large Language Models](https://openreview.net/pdf?id=dNzBW0tXZf).
+Zhen Zhang, Xinyu Wang, Yong Jiang, **Zhuo Chen**, Feiteng Mu, Mengting Hu, Pengjun Xie, Fei Huang. In Findings of the 2025 Conference on Empirical Methods in Natural Language Processing
 
 - [Improving Retrieval Augmented Open-Domain Question-Answering with Vectorized Contexts](https://aclanthology.org/2024.findings-acl.458/).
 **Zhuo Chen**, Xinyu Wang, Yong Jiang, Pengjun Xie, Fei Huang, Kewei Tu. In Findings of the Association for Computational Linguistics ACL 2024
-
-- [Exploring Knowledge Boundaries in Large Language Models for Retrieval Judgment](https://arxiv.org/abs/2411.06207).
-Zhen Zhang, Xinyu Wang, Yong Jiang, **Zhuo Chen**, Feiteng Mu, Mengting Hu, Pengjun Xie, Fei Huang. Preprint
 
 - [Using Interpretation Methods for Model Enhancement](https://aclanthology.org/2023.emnlp-main.28/).
 **Zhuo Chen**, Chengyue Jiang, and Kewei Tu. In Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing
@@ -68,9 +68,9 @@ Zhen Zhang, Xinyu Wang, Yong Jiang, **Zhuo Chen**, Feiteng Mu, Mengting Hu, Peng
 - *2021-now*, ShanghaiTech University, Ph.D. advised by Prof. Kewei Tu.
 
 
-<!-- 
+<!--
 # 💬 Invited Talks
-- *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+- *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.
 - *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/) -->
 
 # 💻 Internships
