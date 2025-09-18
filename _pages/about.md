@@ -26,7 +26,20 @@ My research focuses on Natural Language Processing (NLP). Recently, I'm doing re
 - *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.
 - *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
 
+# 🔥 News
+- *2025.9*: Check out our open-source Tongyi DeepResearch Agent
+  - Paper: [Scaling Agents via Continual Pre-training](https://arxiv.org/abs/2509.13310)
+  - ⭐
+[Github](https://github.com/Alibaba-NLP/DeepResearch)
+​[Web Page](https://tongyi-agent.github.io/)
+[Blog](https://tongyi-agent.github.io/blog/introducing-tongyi-deep-research/)
+[HuggingFace](https://huggingface.co/Alibaba-NLP/Tongyi-DeepResearch-30B-A3B)
+[ModelScope](https://modelscope.cn/models/iic/Tongyi-DeepResearch-30B-A3B)
+[Huggingface daily paper](https://huggingface.co/papers/date/2025-09-17)
+
 # 📝 Publications
+- [Scaling Agents via Continual Pre-training](https://arxiv.org/abs/2509.13310)
+Liangcai Su*, Zhen Zhang*, Guangyu Li*, **Zhuo Chen***, Chenxi Wang*, Maojia Song, Xinyu Wang, etc. Preprint
 
 - [Detecting Knowledge Boundary of Vision Large Language Models by Sampling-Based Inference](https://arxiv.org/abs/2502.18023).
 **Zhuo Chen**, Xinyu Wang, Yong Jiang, Zhen Zhang, Xinyu Geng, Pengjun Xie, Fei Huang, Kewei Tu. In Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing
