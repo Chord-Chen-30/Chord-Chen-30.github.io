@@ -38,7 +38,7 @@ My research focuses on Natural Language Processing (NLP). Recently, I'm doing re
 
 # 📝 Publications
 - [Scaling Agents via Continual Pre-training](https://arxiv.org/abs/2509.13310).
-Liangcai Su*, Zhen Zhang*, Guangyu Li*, **Zhuo Chen***, Chenxi Wang*, Maojia Song, Xinyu Wang, etc. Preprint
+Liangcai Su\*, Zhen Zhang\*, Guangyu Li\*, **Zhuo Chen**\*, Chenxi Wang\*, Maojia Song, Xinyu Wang\*, etc. Preprint
 
 - [Detecting Knowledge Boundary of Vision Large Language Models by Sampling-Based Inference](https://arxiv.org/abs/2502.18023).
 **Zhuo Chen**, Xinyu Wang, Yong Jiang, Zhen Zhang, Xinyu Geng, Pengjun Xie, Fei Huang, Kewei Tu. In Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing
