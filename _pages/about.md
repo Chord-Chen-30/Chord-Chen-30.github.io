@@ -19,7 +19,7 @@ redirect_from:
 
 Hi! I'm Zhuo Chen (陈卓), a Ph.D. student at ShanghaiTech University, supervised by Prof. Kewei Tu.
 
-My research focuses on Natural Language Processing (NLP). Recently, I'm doing reasearch related to (Multimodal) LLMs, RAG and Continue Pre-train (CPT) towards `DeepResearch` of LLMs at Tongyi Lab, Alibaba.
+My research focuses on Natural Language Processing (NLP). Recently, I'm doing research related to (Multimodal) LLMs, RAG and Continue Pre-train (CPT) towards `DeepResearch` of LLMs at Tongyi Lab, Alibaba.
 
 <!--
 # 🔥 News
@@ -27,23 +27,25 @@ My research focuses on Natural Language Processing (NLP). Recently, I'm doing re
 - *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
 
 # 🔥 News
-- *2025.9*: Check out our open-source Tongyi DeepResearch Agent
-  - Paper: [Scaling Agents via Continual Pre-training](https://arxiv.org/abs/2509.13310)
+- *2025.11* [Tongyi DeepResearch Technical Report](https://arxiv.org/abs/2510.24701)!
   - ⭐ [Github](https://github.com/Alibaba-NLP/DeepResearch)
 [Web Page](https://tongyi-agent.github.io/) 
 [Blog](https://tongyi-agent.github.io/blog/introducing-tongyi-deep-research/) 
 [HuggingFace](https://huggingface.co/Alibaba-NLP/Tongyi-DeepResearch-30B-A3B) 
 [ModelScope](https://modelscope.cn/models/iic/Tongyi-DeepResearch-30B-A3B) 
 [Huggingface daily paper](https://huggingface.co/papers/date/2025-09-17) 
+- *2025.9*: Check out our open-source Tongyi DeepResearch Agent after Continue Pre-train
+  - Paper: [Scaling Agents via Continual Pre-training](https://arxiv.org/abs/2509.13310)
 
 # 📝 Publications
+
 - [Scaling Agents via Continual Pre-training](https://arxiv.org/abs/2509.13310).
 Liangcai Su\*, Zhen Zhang\*, Guangyu Li\*, **Zhuo Chen**\*, Chenxi Wang\*, Maojia Song, Xinyu Wang\*, etc. Preprint
 
-- [Detecting Knowledge Boundary of Vision Large Language Models by Sampling-Based Inference](https://arxiv.org/abs/2502.18023).
+- [Detecting Knowledge Boundary of Vision Large Language Models by Sampling-Based Inference](https://aclanthology.org/2025.emnlp-main.1458/).
 **Zhuo Chen**, Xinyu Wang, Yong Jiang, Zhen Zhang, Xinyu Geng, Pengjun Xie, Fei Huang, Kewei Tu. In Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing
 
-- [KBM: Delineating Knowledge Boundary for Adaptive Retrieval in Large Language Models](https://openreview.net/pdf?id=dNzBW0tXZf).
+- [KBM: Delineating Knowledge Boundary for Adaptive Retrieval in Large Language Models](https://aclanthology.org/2025.findings-emnlp.1188/).
 Zhen Zhang, Xinyu Wang, Yong Jiang, **Zhuo Chen**, Feiteng Mu, Mengting Hu, Pengjun Xie, Fei Huang. In Findings of the 2025 Conference on Empirical Methods in Natural Language Processing
 
 - [Improving Retrieval Augmented Open-Domain Question-Answering with Vectorized Contexts](https://aclanthology.org/2024.findings-acl.458/).
