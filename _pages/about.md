@@ -19,7 +19,7 @@ redirect_from:
 
 Hi! I'm Zhuo Chen (陈卓), a Ph.D. student at ShanghaiTech University, supervised by Prof. Kewei Tu.
 
-My research focuses on Natural Language Processing (NLP). Recently, I'm doing research related to (Multimodal) LLMs, RAG and Continue Pre-train (CPT) towards `DeepResearch` of LLMs at Tongyi Lab, Alibaba.
+My research focuses on Natural Language Processing (NLP). Recently, I'm doing research related to **(Multimodal) LLMs**, **RAG** and **Continue Pre-train (CPT) towards DeepResearch** of LLMs at Tongyi Lab, Alibaba.
 
 <!--
 # 🔥 News
@@ -27,6 +27,7 @@ My research focuses on Natural Language Processing (NLP). Recently, I'm doing re
 - *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
 
 # 🔥 News
+
 - *2025.11* [Tongyi DeepResearch Technical Report](https://arxiv.org/abs/2510.24701)!
   - ⭐ [Github](https://github.com/Alibaba-NLP/DeepResearch)
 [Web Page](https://tongyi-agent.github.io/) 
@@ -36,6 +37,7 @@ My research focuses on Natural Language Processing (NLP). Recently, I'm doing re
 [Huggingface daily paper](https://huggingface.co/papers/date/2025-09-17) 
 - *2025.9*: Check out our open-source Tongyi DeepResearch Agent after Continue Pre-train
   - Paper: [Scaling Agents via Continual Pre-training](https://arxiv.org/abs/2509.13310)
+
 
 # 📝 Publications
 
@@ -47,6 +49,9 @@ Liangcai Su\*, Zhen Zhang\*, Guangyu Li\*, **Zhuo Chen**\*, Chenxi Wang\*, Maoji
 
 - [KBM: Delineating Knowledge Boundary for Adaptive Retrieval in Large Language Models](https://aclanthology.org/2025.findings-emnlp.1188/).
 Zhen Zhang, Xinyu Wang, Yong Jiang, **Zhuo Chen**, Feiteng Mu, Mengting Hu, Pengjun Xie, Fei Huang. In Findings of the 2025 Conference on Empirical Methods in Natural Language Processing
+
+- [Repurposing Synthetic Data for Fine-grained Search Agent Supervision](https://openreview.net/forum?id=CByVWPpb8T&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DICLR.cc%2F2026%2FConference%2FAuthors%23your-submissions)).
+Yida Zhao, Kuan Li, Xixi Wu, Liwen Zhang, Dingchu Zhang, Baixuan Li, Maojia Song, **Zhuo Chen**, Chenxi Wang, Xinyu Wang, Kewei Tu, Pengjun Xie, Jingren Zhou, Yong Jiang. Preprint
 
 - [Improving Retrieval Augmented Open-Domain Question-Answering with Vectorized Contexts](https://aclanthology.org/2024.findings-acl.458/).
 **Zhuo Chen**, Xinyu Wang, Yong Jiang, Pengjun Xie, Fei Huang, Kewei Tu. In Findings of the Association for Computational Linguistics ACL 2024
@@ -67,6 +72,7 @@ Zhen Zhang, Xinyu Wang, Yong Jiang, **Zhuo Chen**, Feiteng Mu, Mengting Hu, Peng
 <!-- - [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020** -->
 
 # 🎖 Honors and Awards
+
 - 2024 ShanghaiTech Outstanding Student
 - 2021 ShanghaiTech Outstanding Graduate (Top 10%)
 - 2019-2020 Third Prize of ShanghaiTech University Scholarship (Top 8%)
@@ -75,9 +81,8 @@ Zhen Zhang, Xinyu Wang, Yong Jiang, **Zhuo Chen**, Feiteng Mu, Mengting Hu, Peng
 - 2018-2019 Second Prize of ShanghaiTech University Scholarship (Top 5%)
 
 
-
-
 # 📖 Educations
+
 - *2017-2021*, ShanghaiTech University, B.S. in Computer Science.
 - *2021-now*, ShanghaiTech University, Ph.D. advised by Prof. Kewei Tu.
 
@@ -88,4 +93,5 @@ Zhen Zhang, Xinyu Wang, Yong Jiang, **Zhuo Chen**, Feiteng Mu, Mengting Hu, Peng
 - *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/) -->
 
 # 💻 Internships
+
 - *2023.08 - now*, Tongyi Lab, Alibaba (DAMO Academy previously).
