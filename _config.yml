@@ -9,7 +9,7 @@
 title                    : "Zhuo Chen"
 description              : "Ph.D. student at ShanghaiTech University"
 repository               : "Chord-Chen-30/Chord-Chen-30.github.io"
-google_scholar_stats_use_cdn : false
+google_scholar_stats_use_cdn : true
 
 # google analytics
 # google_analytics_id      :  # get google_analytics_id from https://analytics.google.com/analytics/
