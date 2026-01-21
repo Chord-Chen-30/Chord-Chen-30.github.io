@@ -41,19 +41,15 @@ My research focuses on Natural Language Processing (NLP). Recently, I'm doing re
 
 # 📝 Publications
 
-- [Tongyi deepresearch technical report](https://arxiv.org/abs/2510.24701) <strong><span class='show_paper_citations' data='zFqs8PUAAAAJ:Tyk-4Ss8FVUC'></span></strong>
+- [Tongyi deepresearch technical report](https://arxiv.org/abs/2510.24701), [GitHub 18k ⭐️](https://github.com/Alibaba-NLP/DeepResearch) <strong><span class='show_paper_citations' data='zFqs8PUAAAAJ:Tyk-4Ss8FVUC'></span></strong>
 
 - [Scaling Agents via Continual Pre-training](https://arxiv.org/abs/2509.13310).
-Liangcai Su\*, Zhen Zhang\*, Guangyu Li\*, **Zhuo Chen**\*, Chenxi Wang\*, Maojia Song, Xinyu Wang\*, etc. Preprint <strong><span class='show_paper_citations' data='zFqs8PUAAAAJ:UeHWp8X0CEIC'></span></strong>
+Liangcai Su\*, Zhen Zhang\*, Guangyu Li\*, **Zhuo Chen**\*, Chenxi Wang\*, Maojia Song, Xinyu Wang\*, etc. ICLR 8/8/4
+
+- [Efficient Multimodal Planning Agent for Visual Question-Answering](https://openreview.net/forum?id=IBvJT4BGgW) **Zhuo Chen**, Xinyu Geng, Xinyu Wang, Yong Jiang, Zhen Zhang, Pengjun Xie, Fei Huang, Kewei Tu. ICLR 8/8/4/4
 
 - [Detecting Knowledge Boundary of Vision Large Language Models by Sampling-Based Inference](https://aclanthology.org/2025.emnlp-main.1458/).
 **Zhuo Chen**, Xinyu Wang, Yong Jiang, Zhen Zhang, Xinyu Geng, Pengjun Xie, Fei Huang, Kewei Tu. In Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing
-
-- [KBM: Delineating Knowledge Boundary for Adaptive Retrieval in Large Language Models](https://aclanthology.org/2025.findings-emnlp.1188/).
-Zhen Zhang, Xinyu Wang, Yong Jiang, **Zhuo Chen**, Feiteng Mu, Mengting Hu, Pengjun Xie, Fei Huang. In Findings of the 2025 Conference on Empirical Methods in Natural Language Processing
-
-- [Repurposing Synthetic Data for Fine-grained Search Agent Supervision](https://openreview.net/forum?id=CByVWPpb8T&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DICLR.cc%2F2026%2FConference%2FAuthors%23your-submissions)).
-Yida Zhao, Kuan Li, Xixi Wu, Liwen Zhang, Dingchu Zhang, Baixuan Li, Maojia Song, **Zhuo Chen**, Chenxi Wang, Xinyu Wang, Kewei Tu, Pengjun Xie, Jingren Zhou, Yong Jiang. Preprint
 
 - [Improving Retrieval Augmented Open-Domain Question-Answering with Vectorized Contexts](https://aclanthology.org/2024.findings-acl.458/).
 **Zhuo Chen**, Xinyu Wang, Yong Jiang, Pengjun Xie, Fei Huang, Kewei Tu. In Findings of the Association for Computational Linguistics ACL 2024
@@ -61,7 +57,11 @@ Yida Zhao, Kuan Li, Xixi Wu, Liwen Zhang, Dingchu Zhang, Baixuan Li, Maojia Song
 - [Using Interpretation Methods for Model Enhancement](https://aclanthology.org/2023.emnlp-main.28/).
 **Zhuo Chen**, Chengyue Jiang, and Kewei Tu. In Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing
 
+- [KBM: Delineating Knowledge Boundary for Adaptive Retrieval in Large Language Models](https://aclanthology.org/2025.findings-emnlp.1188/).
+Zhen Zhang, Xinyu Wang, Yong Jiang, **Zhuo Chen**, Feiteng Mu, Mengting Hu, Pengjun Xie, Fei Huang. In Findings of the 2025 Conference on Empirical Methods in Natural Language Processing
 
+- [Repurposing Synthetic Data for Fine-grained Search Agent Supervision](https://openreview.net/forum?id=CByVWPpb8T&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DICLR.cc%2F2026%2FConference%2FAuthors%23your-submissions)).
+Yida Zhao, Kuan Li, Xixi Wu, Liwen Zhang, Dingchu Zhang, Baixuan Li, Maojia Song, **Zhuo Chen**, Chenxi Wang, Xinyu Wang, Kewei Tu, Pengjun Xie, Jingren Zhou, Yong Jiang. ICLR26 6/6/4/4
 
 <!-- <div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1"> -->
