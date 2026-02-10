@@ -28,6 +28,7 @@ My research focuses on Natural Language Processing (NLP). Recently, I'm doing re
 
 # 🔥 News
 
+- *2026.1* Two papers accepted by ICLR 2026!
 - *2025.11* [Tongyi DeepResearch Technical Report](https://arxiv.org/abs/2510.24701)!
   - ⭐ [Github](https://github.com/Alibaba-NLP/DeepResearch)
 [Web Page](https://tongyi-agent.github.io/) 
@@ -41,27 +42,27 @@ My research focuses on Natural Language Processing (NLP). Recently, I'm doing re
 
 # 📝 Publications
 
-- [Tongyi deepresearch technical report](https://arxiv.org/abs/2510.24701), [GitHub 18k ⭐️](https://github.com/Alibaba-NLP/DeepResearch) <strong><span class='show_paper_citations' data='zFqs8PUAAAAJ:Tyk-4Ss8FVUC'></span></strong>
+- [Tongyi DeepResearch Technical Report](https://arxiv.org/abs/2510.24701), [GitHub](https://github.com/Alibaba-NLP/DeepResearch) 18k+ ⭐️
 
 - [Scaling Agents via Continual Pre-training](https://arxiv.org/abs/2509.13310).
-Liangcai Su\*, Zhen Zhang\*, Guangyu Li\*, **Zhuo Chen**\*, Chenxi Wang\*, Maojia Song, Xinyu Wang\*, etc. ICLR 8/8/4
+Liangcai Su\*, Zhen Zhang\*, Guangyu Li\*, **Zhuo Chen**\*, Chenxi Wang\*, Maojia Song, Xinyu Wang\*, etc. In Proceedings of the 2026 International Conference on Learning Representations (ICLR)
 
-- [Efficient Multimodal Planning Agent for Visual Question-Answering](https://openreview.net/forum?id=IBvJT4BGgW) **Zhuo Chen**, Xinyu Geng, Xinyu Wang, Yong Jiang, Zhen Zhang, Pengjun Xie, Fei Huang, Kewei Tu. ICLR 8/8/4/4
+- [Efficient Multimodal Planning Agent for Visual Question-Answering](https://arxiv.org/abs/2601.20676) ICML26 Under Review
 
 - [Detecting Knowledge Boundary of Vision Large Language Models by Sampling-Based Inference](https://aclanthology.org/2025.emnlp-main.1458/).
-**Zhuo Chen**, Xinyu Wang, Yong Jiang, Zhen Zhang, Xinyu Geng, Pengjun Xie, Fei Huang, Kewei Tu. In Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing
+**Zhuo Chen**, Xinyu Wang, Yong Jiang, Zhen Zhang, Xinyu Geng, Pengjun Xie, Fei Huang, Kewei Tu. In Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing (EMNLP)
 
 - [Improving Retrieval Augmented Open-Domain Question-Answering with Vectorized Contexts](https://aclanthology.org/2024.findings-acl.458/).
-**Zhuo Chen**, Xinyu Wang, Yong Jiang, Pengjun Xie, Fei Huang, Kewei Tu. In Findings of the Association for Computational Linguistics ACL 2024
+**Zhuo Chen**, Xinyu Wang, Yong Jiang, Pengjun Xie, Fei Huang, Kewei Tu. In Findings of the Association for Computational Linguistics (ACL)
 
 - [Using Interpretation Methods for Model Enhancement](https://aclanthology.org/2023.emnlp-main.28/).
-**Zhuo Chen**, Chengyue Jiang, and Kewei Tu. In Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing
+**Zhuo Chen**, Chengyue Jiang, and Kewei Tu. In Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing (EMNLP)
 
 - [KBM: Delineating Knowledge Boundary for Adaptive Retrieval in Large Language Models](https://aclanthology.org/2025.findings-emnlp.1188/).
-Zhen Zhang, Xinyu Wang, Yong Jiang, **Zhuo Chen**, Feiteng Mu, Mengting Hu, Pengjun Xie, Fei Huang. In Findings of the 2025 Conference on Empirical Methods in Natural Language Processing
+Zhen Zhang, Xinyu Wang, Yong Jiang, **Zhuo Chen**, Feiteng Mu, Mengting Hu, Pengjun Xie, Fei Huang. In Findings of the 2025 Conference on Empirical Methods in Natural Language Processing (EMNLP)
 
 - [Repurposing Synthetic Data for Fine-grained Search Agent Supervision](https://openreview.net/forum?id=CByVWPpb8T&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DICLR.cc%2F2026%2FConference%2FAuthors%23your-submissions)).
-Yida Zhao, Kuan Li, Xixi Wu, Liwen Zhang, Dingchu Zhang, Baixuan Li, Maojia Song, **Zhuo Chen**, Chenxi Wang, Xinyu Wang, Kewei Tu, Pengjun Xie, Jingren Zhou, Yong Jiang. ICLR26 6/6/4/4
+Yida Zhao, Kuan Li, Xixi Wu, Liwen Zhang, Dingchu Zhang, Baixuan Li, Maojia Song, **Zhuo Chen**, Chenxi Wang, Xinyu Wang, Kewei Tu, Pengjun Xie, Jingren Zhou, Yong Jiang. In Proceedings of the 2026 International Conference on Learning Representations (ICLR)
 
 <!-- <div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1"> -->
