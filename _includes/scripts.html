@@ -8,6 +8,18 @@
         link.rel = 'noopener noreferrer';
       }
     });
+
+    var themeBtn = document.getElementById('theme-toggle');
+    if (themeBtn) {
+      themeBtn.addEventListener('click', function () {
+        var isDark = document.documentElement.classList.toggle('dark');
+        var icon = themeBtn.querySelector('i');
+        if (icon) {
+          icon.classList.toggle('fa-moon', !isDark);
+          icon.classList.toggle('fa-sun', isDark);
+        }
+      });
+    }
   });
 </script>
 
