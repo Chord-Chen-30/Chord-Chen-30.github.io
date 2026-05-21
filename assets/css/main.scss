@@ -108,31 +108,28 @@ h1:before, .anchor:before {
     font-size: .8em;
 }
 
-.theme-toggle-btn {
-    position: fixed;
-    top: 0.5em;
-    right: 1em;
-    z-index: 100;
+/* Theme toggle button lives inside .greedy-nav.
+   .greedy-nav button already gives it: position: absolute; height: 100%; right: 0;
+   Here we override the colored "more"-button look and center the icon vertically. */
+.greedy-nav button.theme-toggle-btn {
     background: none;
-    border: none;
-    font-size: 1.1em;
-    cursor: pointer;
     color: #555;
-    padding: 0.5rem;
-    line-height: 1;
+    padding: 0 0.75rem;
+    font-size: 1.1em;
     opacity: 0.7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &:hover {
         opacity: 1;
     }
 }
 
-/* On narrow / portrait screens, shift the greedy-nav "more" button left
-   so it doesn't overlap with the theme toggle button. */
-@media (max-width: 924px) {
-    .greedy-nav button {
-        right: 3em;
-    }
+/* Shift the "more" hamburger button left so it does not overlap the theme toggle.
+   The :not() makes sure this rule does NOT affect the theme toggle itself. */
+.greedy-nav > button:not(.theme-toggle-btn) {
+    right: 2.5em;
 }
 
 html.dark {
