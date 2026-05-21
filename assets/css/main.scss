@@ -127,6 +127,14 @@ h1:before, .anchor:before {
     }
 }
 
+/* On narrow / portrait screens, shift the greedy-nav "more" button left
+   so it doesn't overlap with the theme toggle button. */
+@media (max-width: 924px) {
+    .greedy-nav button {
+        right: 3em;
+    }
+}
+
 html.dark {
     body { background: #1a1a1a; color: #e0e0e0; }
     a { color: #6db4e0; }
