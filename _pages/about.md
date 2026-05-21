@@ -30,12 +30,7 @@ My research focuses on Natural Language Processing (NLP). Recently, I'm doing re
 
 - *2026.1* Two papers accepted by ICLR 2026!
 - *2025.11* [Tongyi DeepResearch Technical Report](https://arxiv.org/abs/2510.24701)!
-  - ⭐ [Github](https://github.com/Alibaba-NLP/DeepResearch)
-[Web Page](https://tongyi-agent.github.io/) 
-[Blog](https://tongyi-agent.github.io/blog/introducing-tongyi-deep-research/) 
-[HuggingFace](https://huggingface.co/Alibaba-NLP/Tongyi-DeepResearch-30B-A3B) 
-[ModelScope](https://modelscope.cn/models/iic/Tongyi-DeepResearch-30B-A3B) 
-[Huggingface daily paper](https://huggingface.co/papers/date/2025-09-17) 
+  - ⭐ [Github](https://github.com/Alibaba-NLP/DeepResearch) \| [Web Page](https://tongyi-agent.github.io/) \| [Blog](https://tongyi-agent.github.io/blog/introducing-tongyi-deep-research/) \| [HuggingFace](https://huggingface.co/Alibaba-NLP/Tongyi-DeepResearch-30B-A3B) \| [ModelScope](https://modelscope.cn/models/iic/Tongyi-DeepResearch-30B-A3B) \| [Huggingface daily paper](https://huggingface.co/papers/date/2025-09-17)
 - *2025.9*: Check out our open-source Tongyi DeepResearch Agent after Continue Pre-train
   - Paper: [Scaling Agents via Continual Pre-training](https://arxiv.org/abs/2509.13310)
 
