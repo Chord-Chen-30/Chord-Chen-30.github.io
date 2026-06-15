@@ -8,8 +8,8 @@ redirect_from:
   - /about.html
 ---
 
-{% if site.google_scholar_stats_use_cdn %}
-{% assign url = "https://cdn.jsdelivr.net/gh/" | append: site.repository | append: "@google-scholar-stats/gs_data_shieldsio.json" %}
+{% if site.google_scholar_stats_use_cdn and site.data.google_scholar_stats.commit %}
+{% assign url = "https://cdn.jsdelivr.net/gh/" | append: site.repository | append: "@" | append: site.data.google_scholar_stats.commit | append: "/gs_data_shieldsio.json" %}
 {% else %}
 {% assign url = "https://raw.githubusercontent.com/" | append: site.repository | append: "/google-scholar-stats/gs_data_shieldsio.json" %}
 {% endif %}

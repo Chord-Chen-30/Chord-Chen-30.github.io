@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - master
+    paths-ignore:
+      - '_data/google_scholar_stats.json'
   schedule:
     - cron: '0 8 * * *'
   workflow_dispatch:
@@ -28,8 +30,17 @@ jobs:
         git add *.json
         git commit -m "Updated Citation Data"
         git push "${remote_repo}" HEAD:google-scholar-stats --force
+        echo "GS_STATS_COMMIT=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
       env:
         GOOGLE_SCHOLAR_ID: ${{ secrets.GOOGLE_SCHOLAR_ID }}
+    - name: Update CDN commit pointer
+      run: |
+        printf '{\n  "commit": "%s"\n}\n' "$GS_STATS_COMMIT" > _data/google_scholar_stats.json
+        git config --local user.name "${GITHUB_ACTOR}"
+        git config --local user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+        git add _data/google_scholar_stats.json
+        git diff --staged --quiet || git commit -m "Update Google Scholar stats CDN commit pointer"
+        git push
     - name: Purge jsDelivr CDN cache
       run: |
         curl -fsS "https://purge.jsdelivr.net/gh/${GITHUB_REPOSITORY}@google-scholar-stats/gs_data.json"

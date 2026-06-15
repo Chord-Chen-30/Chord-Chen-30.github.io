@@ -1,11 +1,13 @@
 <script>
     $(document).ready(function () {
-        {% if site.google_scholar_stats_use_cdn %}
-        var gsDataUrl = 'https://cdn.jsdelivr.net/gh/{{ site.repository }}@google-scholar-stats/gs_data.json'
+        {% if site.google_scholar_stats_use_cdn and site.data.google_scholar_stats.commit %}
+        var gsDataUrl = 'https://cdn.jsdelivr.net/gh/{{ site.repository }}@{{ site.data.google_scholar_stats.commit }}/gs_data.json'
+        var gsDataFallbackUrl = 'https://raw.githubusercontent.com/{{ site.repository }}/google-scholar-stats/gs_data.json'
         {% else %}
         var gsDataUrl = 'https://raw.githubusercontent.com/{{ site.repository }}/google-scholar-stats/gs_data.json'
         {% endif %}
-        $.getJSON(gsDataUrl, function (data) {
+
+        function renderCitations(data) {
             var totalCitation = data['citedby']
             var totalCitEl = document.getElementById('total_cit');
             if (totalCitEl) totalCitEl.innerHTML = ' ' + totalCitation;
@@ -15,6 +17,12 @@
                 var numCitations = data['publications'][paperId]['num_citations']
                 element.innerHTML = '| Citations: ' + numCitations;
             });
+        }
+
+        $.getJSON(gsDataUrl, renderCitations).fail(function () {
+            if (typeof gsDataFallbackUrl !== 'undefined') {
+                $.getJSON(gsDataFallbackUrl, renderCitations);
+            }
         });
     })
 </script>
