@@ -1,9 +1,9 @@
 # City galleries
 
-Put photos in a folder named:
+Put photos in the **source** project:
 
 ```
-<city>__<country>
+spidey-tracker-repro/public/galleries/<city>__<country>/
 ```
 
 Rules:
@@ -11,16 +11,18 @@ Rules:
 - spaces → `-`
 - city and country separated by `__` (two underscores)
 
-Examples (already created empty):
+Examples:
 
 | Place | Folder |
 |-------|--------|
+| Miami, USA | `miami__usa/` |
+| Key West, USA | `key-west__usa/` |
 | New York, USA | `new-york__usa/` |
-| Rio de Janeiro, Brazil | `rio-de-janeiro__brazil/` |
-| Mexico City, Mexico | `mexico-city__mexico/` |
+| Shanghai, China | `shanghai__china/` |
 
-Supported: `.jpg` `.jpeg` `.png` `.webp` `.gif` `.avif`  
-Sorted by filename (`01.jpg`, `02.jpg`, …).
+Supported in browser: `.jpg` `.jpeg` `.png` `.webp` `.gif` `.avif`  
+(Not `.heic` — convert to jpg/png first.)
 
-After adding or removing images, the dev server reloads the gallery list automatically.
-Empty folders still show placeholder tiles.
+Sorted by filename (`01.jpg`, `02.jpg`, …).  
+After adding images locally, restart/refresh the Vite app so the gallery list updates.  
+To show on github.io: rebuild + push (copying only into the Pages repo is not enough for new filenames).
