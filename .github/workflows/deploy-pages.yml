@@ -1,9 +1,9 @@
 # Build Jekyll → publish static site to the gh-pages branch.
-# Avoids actions/deploy-pages (this repo's Pages deploy queue is stuck on deployment_queued).
 #
 # One-time Settings → Pages → Build and deployment:
 #   Source: Deploy from a branch
 #   Branch: gh-pages / (root)
+# (Branch appears after this workflow succeeds once.)
 
 name: Deploy GitHub Pages
 
@@ -26,6 +26,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # Pre-create so the dir is owned by the runner (docker build runs as root).
+      - name: Prepare output dir
+        run: mkdir -p _site
+
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
@@ -33,7 +37,7 @@ jobs:
           destination: ./_site
 
       - name: Add .nojekyll
-        run: touch _site/.nojekyll
+        run: sudo touch _site/.nojekyll && sudo chown -R "$USER:$USER" _site && ls -la _site | head
 
       - name: Publish to gh-pages
         uses: peaceiris/actions-gh-pages@v4
