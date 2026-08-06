@@ -1,6 +1,5 @@
 # Build the Jekyll site and deploy to GitHub Pages.
-# Required once: Settings → Pages → Source → "GitHub Actions"
-# (branch-based deploy has been timing out on this repo.)
+# Settings → Pages → Source must be "GitHub Actions".
 
 name: Deploy GitHub Pages
 
@@ -28,16 +27,12 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: "3.2"
-          bundler-cache: true
-
+      # Same builder GitHub uses for branch Pages (avoids Gemfile/bundler fights).
       - name: Build with Jekyll
-        run: bundle exec jekyll build --destination _site
-        env:
-          JEKYLL_ENV: production
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
