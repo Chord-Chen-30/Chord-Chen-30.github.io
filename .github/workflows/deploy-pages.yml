@@ -1,5 +1,9 @@
-# Build the Jekyll site and deploy to GitHub Pages.
-# Settings → Pages → Source must be "GitHub Actions".
+# Build Jekyll → publish static site to the gh-pages branch.
+# Avoids actions/deploy-pages (this repo's Pages deploy queue is stuck on deployment_queued).
+#
+# One-time Settings → Pages → Build and deployment:
+#   Source: Deploy from a branch
+#   Branch: gh-pages / (root)
 
 name: Deploy GitHub Pages
 
@@ -9,43 +13,33 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
   group: pages
   cancel-in-progress: true
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
-      # Same builder GitHub uses for branch Pages (avoids Gemfile/bundler fights).
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
           source: ./
           destination: ./_site
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: _site
+      - name: Add .nojekyll
+        run: touch _site/.nojekyll
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Publish to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          force_orphan: true
+          user_name: github-actions[bot]
+          user_email: github-actions[bot]@users.noreply.github.com
