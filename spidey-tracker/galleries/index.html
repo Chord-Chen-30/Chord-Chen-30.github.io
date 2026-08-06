@@ -1,0 +1,57 @@
+<h1 id="city-galleries">City galleries</h1>
+
+<p>Put photos in the <strong>source</strong> project:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>spidey-tracker-repro/public/galleries/&lt;city&gt;__&lt;country&gt;/
+</code></pre></div></div>
+
+<p>Rules:</p>
+<ul>
+  <li>lowercase</li>
+  <li>spaces → <code class="language-plaintext highlighter-rouge">-</code></li>
+  <li>city and country separated by <code class="language-plaintext highlighter-rouge">__</code> (two underscores)</li>
+</ul>
+
+<p>Examples:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Place</th>
+      <th>Folder</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Miami, USA</td>
+      <td><code class="language-plaintext highlighter-rouge">miami__usa/</code></td>
+    </tr>
+    <tr>
+      <td>Key West, USA</td>
+      <td><code class="language-plaintext highlighter-rouge">key-west__usa/</code></td>
+    </tr>
+    <tr>
+      <td>New York, USA</td>
+      <td><code class="language-plaintext highlighter-rouge">new-york__usa/</code></td>
+    </tr>
+    <tr>
+      <td>Shanghai, China</td>
+      <td><code class="language-plaintext highlighter-rouge">shanghai__china/</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Supported in browser: <code class="language-plaintext highlighter-rouge">.jpg</code> <code class="language-plaintext highlighter-rouge">.jpeg</code> <code class="language-plaintext highlighter-rouge">.png</code> <code class="language-plaintext highlighter-rouge">.webp</code> <code class="language-plaintext highlighter-rouge">.gif</code> <code class="language-plaintext highlighter-rouge">.avif</code><br />
+(Not <code class="language-plaintext highlighter-rouge">.heic</code> — convert to jpg/png first.)</p>
+
+<p><strong>Compress before deploy</strong> (raw camera files can break GitHub Pages deploy by size/timeout):</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># from spidey-tracker-repro/</span>
+python3 scripts/compress-gallery-images.py public/galleries <span class="nt">--dry-run</span>
+python3 scripts/compress-gallery-images.py public/galleries
+<span class="c"># full flag docs: see ../README.md (or deployed spidey-tracker/README.md)</span>
+</code></pre></div></div>
+
+<p>Sorted by filename (<code class="language-plaintext highlighter-rouge">01.jpg</code>, <code class="language-plaintext highlighter-rouge">02.jpg</code>, …).<br />
+After adding images locally, restart/refresh the Vite app so the gallery list updates.<br />
+To show on github.io: rebuild + push (copying only into the Pages repo is not enough for new filenames).</p>
