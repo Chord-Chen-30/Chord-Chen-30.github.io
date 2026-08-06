@@ -1,11 +1,7 @@
 name: Get Citation Data
 
 on:
-  push:
-    branches:
-      - master
-    paths-ignore:
-      - '_data/google_scholar_stats.json'
+  # Avoid racing Pages deploy on every master push (was contributing to deploy timeouts).
   schedule:
     - cron: '0 8 * * *'
   workflow_dispatch:
