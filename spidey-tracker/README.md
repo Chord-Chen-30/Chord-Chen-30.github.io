@@ -74,8 +74,14 @@ What it does: EXIF orientation fix → LANCZOS resize → progressive JPEG (`opt
 
 ### If Pages deploy still times out
 
-Compressing alone is not enough when GitHub’s branch deploy hangs. This repo also has Actions workflow `.github/workflows/deploy-pages.yml`. In GitHub:
+This repo’s GitHub Pages **publish queue** can stick on `deployment_queued` / deploy timeout even with a small build.
 
-**Settings → Pages → Build and deployment → Source → GitHub Actions**
+Use the Actions workflow `.github/workflows/deploy-pages.yml` (builds with Jekyll, then pushes static files to the **`gh-pages`** branch).
 
-Then re-run the failed workflow or push again.
+In GitHub:
+
+1. Cancel any stuck **Deploy** / **pages build and deployment** runs.
+2. **Settings → Pages → Build and deployment**
+   - Source: **Deploy from a branch**
+   - Branch: **`gh-pages`** / **/(root)**
+3. Re-run **Deploy GitHub Pages** (or push to `master`).
