@@ -120,6 +120,11 @@ kramdown:
 
 # Defaults
 defaults:
+  # Fan SPA: do not wrap in academic layout / permalink scheme
+  - scope:
+      path: "spidey-tracker"
+    values:
+      layout: null
   # _pages
   - scope:
       path: ""
