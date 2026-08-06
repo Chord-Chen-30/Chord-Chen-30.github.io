@@ -33,31 +33,23 @@ layout: compress
       <img src="https://visitor-badge.laobi.icu/badge?page_id=Chord-Chen-30.Chord-Chen-30.github.io" alt="Vist"/>
     </div>
 
-    <a class="spidey-easter" href="{{ site.baseurl }}/spidey-tracker/" title="" aria-label="Spidey Tracker">
-      <img src="{{ site.baseurl }}/images/spidey-pixel.png" alt="" width="18" height="18" />
+    {%- comment -%} Discreet Spidey Tracker entry (bottom-left) {%- endcomment -%}
+    <a
+      href="{{ site.baseurl }}/spidey-tracker/"
+      aria-label="Spidey Tracker"
+      title="Spidey Tracker"
+      style="position:fixed;left:12px;bottom:10px;z-index:9999;line-height:0;opacity:.5;display:block;width:22px;height:22px;"
+      onmouseover="this.style.opacity='1'"
+      onmouseout="this.style.opacity='.5'"
+    >
+      <img
+        src="{{ site.baseurl }}/spidey-tracker/spidey-head.png"
+        alt=""
+        width="22"
+        height="22"
+        style="display:block;width:22px;height:22px;image-rendering:pixelated;image-rendering:crisp-edges;"
+      />
     </a>
-    <style>
-      .spidey-easter {
-        position: fixed;
-        left: 10px;
-        bottom: 8px;
-        z-index: 2;
-        line-height: 0;
-        opacity: 0.22;
-        transition: opacity 0.25s ease;
-      }
-      .spidey-easter:hover,
-      .spidey-easter:focus {
-        opacity: 0.95;
-      }
-      .spidey-easter img {
-        display: block;
-        width: 18px;
-        height: 18px;
-        image-rendering: pixelated;
-        image-rendering: crisp-edges;
-      }
-    </style>
     
     {% include scripts.html %}
 
