@@ -823,9 +823,10 @@ uniform ${n} ${r} u_${i};
           <button class="side-tab side-tab--rumored" type="button" data-side="rumored" title="Rumored" aria-label="Rumored filter"></button>
         </div>
 
+        <img class="bezel-title" id="bezel-title" src="${bj}" alt="Spidey Tracker" />
+
         <div class="screen">
           <div class="start" id="start">
-            <img class="start__logo" src="${bj}" alt="Spidey Tracker" />
             <img class="start__watermark" src="${Sj}" alt="" />
             <div class="hang-stage">
               <div class="hang-web"></div>
