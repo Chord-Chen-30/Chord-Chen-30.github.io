@@ -70,6 +70,11 @@
     font-size: 1.1em;
   }
 
+  /* em compounds on nested lists; keep News sub-items same size as parents */
+  li li {
+    font-size: 1em;
+  }
+
   /* paragraph indents */
   p {
     margin: 0 0 $indent-var;

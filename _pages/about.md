@@ -18,7 +18,7 @@ redirect_from:
 
 Hi! I'm Zhuo Chen (陈卓), a Ph.D. student at ShanghaiTech University, supervised by Prof. Kewei Tu.
 
-My research focuses on Natural Language Processing (NLP). Recently, I'm doing research related to **(Multimodal) LLMs**, **RAG** and **Continue Pre-train (CPT) towards DeepResearch** of LLMs at Tongyi Lab, Alibaba.
+My research focuses on Natural Language Processing (NLP). Recently, I was doing research related to **(Multimodal) LLMs**, **RAG** and **Continue Pre-train (CPT) towards DeepResearch** of LLMs at Tongyi Lab, Alibaba. I am currently doing research related to **DeepResearch agentic models Mid-training and Post-training**. 
 
 <!--
 # 🔥 News
@@ -30,7 +30,7 @@ My research focuses on Natural Language Processing (NLP). Recently, I'm doing re
 - *2026.1* Two papers accepted by ICLR 2026!
 - *2025.11* [Tongyi DeepResearch Technical Report](https://arxiv.org/abs/2510.24701)!
   - ⭐ [Github](https://github.com/Alibaba-NLP/DeepResearch) \| [Web Page](https://tongyi-agent.github.io/) \| [Blog](https://tongyi-agent.github.io/blog/introducing-tongyi-deep-research/) \| [HuggingFace](https://huggingface.co/Alibaba-NLP/Tongyi-DeepResearch-30B-A3B) \| [ModelScope](https://modelscope.cn/models/iic/Tongyi-DeepResearch-30B-A3B) \| [Huggingface daily paper](https://huggingface.co/papers/date/2025-09-17)
-- *2025.9*: Check out our open-source Tongyi DeepResearch Agent after Continue Pre-train
+- *2025.9* Check out our open-source Tongyi DeepResearch Agent after Continue Pre-train
   - Paper: [Scaling Agents via Continual Pre-training](https://arxiv.org/abs/2509.13310)
 
 
@@ -38,10 +38,15 @@ My research focuses on Natural Language Processing (NLP). Recently, I'm doing re
 
 - [Tongyi DeepResearch Technical Report](https://arxiv.org/abs/2510.24701), [GitHub](https://github.com/Alibaba-NLP/DeepResearch) 18k+ ⭐️
 
+- [Dependency-Aware Trajectory Refinement for Efficient Multi-Turn Agent Fine-Tuning](https://openreview.net/forum?id=jcfAqlBva7) AACL 2026 Under Review
+
 - [Scaling Agents via Continual Pre-training](https://arxiv.org/abs/2509.13310).
 Liangcai Su\*, Zhen Zhang\*, Guangyu Li\*, **Zhuo Chen**\*, Chenxi Wang\*, Maojia Song, Xinyu Wang\*, etc. In Proceedings of the 2026 International Conference on Learning Representations (ICLR)
 
-- [Efficient Multimodal Planning Agent for Visual Question-Answering](https://arxiv.org/abs/2601.20676) ICML26 Under Review
+- [Efficient Multimodal Planning Agent for Visual Question-Answering](https://arxiv.org/abs/2601.20676) EMNLP 2026 Under Review
+
+- [Argus: Evidence Assembly for Scalable Deep Research Agents](https://arxiv.org/abs/2605.16217).
+Zhen Zhang\*, Liangcai Su\*, **Zhuo Chen**\*, Xiang Lin, Haotian Xu, Kaiyu Yang, Bo An, Simon Du, Lidong Bing, Xinyu Wang. (*Equal Contribution) NeurIPS 2026 Under Review
 
 - [Detecting Knowledge Boundary of Vision Large Language Models by Sampling-Based Inference](https://aclanthology.org/2025.emnlp-main.1458/).
 **Zhuo Chen**, Xinyu Wang, Yong Jiang, Zhen Zhang, Xinyu Geng, Pengjun Xie, Fei Huang, Kewei Tu. In Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing (EMNLP)
@@ -55,7 +60,7 @@ Liangcai Su\*, Zhen Zhang\*, Guangyu Li\*, **Zhuo Chen**\*, Chenxi Wang\*, Maoji
 - [KBM: Delineating Knowledge Boundary for Adaptive Retrieval in Large Language Models](https://aclanthology.org/2025.findings-emnlp.1188/).
 Zhen Zhang, Xinyu Wang, Yong Jiang, **Zhuo Chen**, Feiteng Mu, Mengting Hu, Pengjun Xie, Fei Huang. In Findings of the 2025 Conference on Empirical Methods in Natural Language Processing (EMNLP)
 
-- [Repurposing Synthetic Data for Fine-grained Search Agent Supervision](https://openreview.net/forum?id=CByVWPpb8T&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DICLR.cc%2F2026%2FConference%2FAuthors%23your-submissions)).
+- [Repurposing Synthetic Data for Fine-grained Search Agent Supervision](https://arxiv.org/pdf/2510.24694).
 Yida Zhao, Kuan Li, Xixi Wu, Liwen Zhang, Dingchu Zhang, Baixuan Li, Maojia Song, **Zhuo Chen**, Chenxi Wang, Xinyu Wang, Kewei Tu, Pengjun Xie, Jingren Zhou, Yong Jiang. In Proceedings of the 2026 International Conference on Learning Representations (ICLR)
 
 <!-- <div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
@@ -70,8 +75,8 @@ Yida Zhao, Kuan Li, Xixi Wu, Liwen Zhang, Dingchu Zhang, Baixuan Li, Maojia Song
 
 # 🎖 Honors and Awards
 
-- 2023-2024 ShanghaiTech Outstanding Student (Top 10%)
 - 2024-2025 ShanghaiTech Outstanding Student (Top 10%)
+- 2023-2024 ShanghaiTech Outstanding Student (Top 10%)
 - 2021 ShanghaiTech Outstanding Graduate (Top 10%)
 - 2019-2020 Third Prize of ShanghaiTech University Scholarship (Top 8%)
 - 2019-2020 Outstanding Student: For outstanding students who had contribution to the University (Top 10%)
@@ -81,8 +86,10 @@ Yida Zhao, Kuan Li, Xixi Wu, Liwen Zhang, Dingchu Zhang, Baixuan Li, Maojia Song
 
 # 📖 Educations
 
-- *2017-2021*, ShanghaiTech University, B.S. in Computer Science.
+- *2026.4-now*, NTU, College of Computing and Data Science, Visiting Student advised by Bo An.
 - *2021-now*, ShanghaiTech University, Ph.D. advised by Prof. Kewei Tu.
+- *2017-2021*, ShanghaiTech University, B.S. in Computer Science.
+
 
 
 <!--
@@ -92,4 +99,5 @@ Yida Zhao, Kuan Li, Xixi Wu, Liwen Zhang, Dingchu Zhang, Baixuan Li, Maojia Song
 
 # 💻 Internships
 
-- *2023.08 - now*, Tongyi Lab, Alibaba (DAMO Academy previously).
+- *2026.04 - now*, **Apodex**, Research Intern.
+- *2023.08 - 2026.03*, Tongyi Lab, Alibaba (DAMO Academy previously).
