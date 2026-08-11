@@ -21,7 +21,7 @@ Examples:
 | Shanghai, China | `shanghai__china/` |
 
 Supported in browser: `.jpg` `.jpeg` `.png` `.webp` `.gif` `.avif`  
-(Not `.heic` — convert to jpg/png first.)
+`.heic` / fake `*.HEIC.JPG` are OK in `public/galleries/` — `compress-gallery-images.py` / `sync-to-github.sh` convert them to `.jpg` via macOS `sips`.
 
 **Compress before deploy** (raw camera files can break GitHub Pages deploy by size/timeout):
 

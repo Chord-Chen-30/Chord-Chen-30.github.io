@@ -14,7 +14,41 @@ Some UI pixels (title logo, hang/stand sheets, filter tabs, red/green/event pins
 
 ## Source project
 
-Editable source lives outside this Pages tree (local Vite app). Rebuild with `base=/spidey-tracker/` and copy `dist/` here when updating.
+Editable source lives outside this Pages tree (local Vite app):
+
+`../spidey-tracker-repro/` (sibling of this github.io repo)
+
+### Sync from source (recommended)
+
+From the **source** project root (`spidey-tracker-repro/`):
+
+```bash
+# default: compress galleries → build → sync into this repo’s spidey-tracker/
+# (does not git add / commit / push — do that yourself here)
+bash scripts/sync-to-github.sh
+# or
+npm run sync:github
+```
+
+Useful flags:
+
+```bash
+bash scripts/sync-to-github.sh --dry-run          # preview compress + rsync
+bash scripts/sync-to-github.sh --no-compress      # skip compression
+bash scripts/sync-to-github.sh --quality 82 --max-edge 1400
+```
+
+Env: `GITHUB_IO_ROOT=/path/to/Chord-Chen-30.github.io` if the folders are not siblings.
+
+After sync, in this github.io repo:
+
+```bash
+git add spidey-tracker
+git commit -m "Update Spidey Tracker"
+git push
+```
+
+Do **not** only drop new filenames into `spidey-tracker/galleries/` here — rebuild from source so the gallery manifest updates.
 
 ## Compress gallery photos
 

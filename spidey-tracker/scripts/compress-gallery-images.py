@@ -4,6 +4,9 @@
 Keeps images sharp enough for the in-app gallery while shrinking files so
 Pages deploy does not time out (raw phone JPGs are often 10–13MB each).
 
+Also converts .heic / .heif (and mislabeled HEIC saved as .JPG) → JPEG via
+macOS `sips` when Pillow cannot open them. Browsers do not show HEIC reliably.
+
 Depends on Pillow:
   pip install pillow
   # or: conda activate spidey-tracker && pip install pillow
@@ -12,16 +15,20 @@ Depends on Pillow:
 from __future__ import annotations
 
 import argparse
+import re
+import shutil
+import subprocess
 import sys
+import tempfile
 from pathlib import Path
 
 try:
-    from PIL import Image, ImageOps
+    from PIL import Image, ImageOps, UnidentifiedImageError
 except ImportError:
     print("Pillow is required. Install with:  pip install pillow", file=sys.stderr)
     sys.exit(1)
 
-IMAGE_SUFFIXES = {".jpg", ".jpeg", ".png", ".webp", ".tif", ".tiff"}
+IMAGE_SUFFIXES = {".jpg", ".jpeg", ".png", ".webp", ".tif", ".tiff", ".heic", ".heif"}
 
 
 def human(n: float) -> str:
@@ -37,9 +44,59 @@ def human(n: float) -> str:
 def collect(root: Path) -> list[Path]:
     files: list[Path] = []
     for p in sorted(root.rglob("*")):
-        if p.is_file() and p.suffix.lower() in IMAGE_SUFFIXES:
+        if p.is_file() and p.suffix.lower() in IMAGE_SUFFIXES and not p.name.startswith("."):
             files.append(p)
     return files
+
+
+def jpeg_out_path(path: Path) -> Path:
+    """DSCF.jpg → same; shot.HEIC → shot.jpg; shot.HEIC.JPG → shot.jpg."""
+    stem = re.sub(r"\.(heic|heif)$", "", path.stem, flags=re.IGNORECASE)
+    return path.with_name(f"{stem}.jpg")
+
+
+def looks_like_heic_name(path: Path) -> bool:
+    lower = path.name.lower()
+    return lower.endswith(".heic") or lower.endswith(".heif") or ".heic." in lower or ".heif." in lower
+
+
+def open_via_sips(path: Path) -> Image.Image:
+    if not shutil.which("sips"):
+        raise RuntimeError("macOS sips not available to convert HEIC")
+    with tempfile.TemporaryDirectory() as td:
+        out = Path(td) / "converted.jpg"
+        proc = subprocess.run(
+            ["sips", "-s", "format", "jpeg", str(path), "--out", str(out)],
+            capture_output=True,
+            text=True,
+        )
+        if proc.returncode != 0 or not out.is_file():
+            err = (proc.stderr or proc.stdout or "sips failed").strip()
+            raise RuntimeError(err)
+        with Image.open(out) as im:
+            im = ImageOps.exif_transpose(im)
+            im.load()
+            return im.copy()
+
+
+def open_rgb(path: Path) -> Image.Image:
+    try:
+        with Image.open(path) as im:
+            im.load()
+            im = ImageOps.exif_transpose(im)
+            if im.mode in ("RGBA", "LA") or (im.mode == "P" and "transparency" in im.info):
+                bg = Image.new("RGB", im.size, (255, 255, 255))
+                rgba = im.convert("RGBA")
+                bg.paste(rgba, mask=rgba.split()[-1])
+                return bg
+            return im.convert("RGB")
+    except UnidentifiedImageError:
+        # Fake .JPG that is still HEIC, or other formats Pillow cannot decode
+        return open_via_sips(path)
+    except OSError:
+        if looks_like_heic_name(path) or path.suffix.lower() in {".heic", ".heif"}:
+            return open_via_sips(path)
+        raise
 
 
 def compress_one(
@@ -49,51 +106,45 @@ def compress_one(
     quality: int,
     min_bytes: int,
     dry_run: bool,
-) -> tuple[int, int, bool]:
-    """Returns (before, after, changed)."""
+) -> tuple[int, int, str]:
+    """Returns (before, after, status) where status is changed|skip|error message."""
     before = path.stat().st_size
-    if before < min_bytes:
-        return before, before, False
+    force_convert = looks_like_heic_name(path) or path.suffix.lower() in {".heic", ".heif"}
+    if before < min_bytes and not force_convert:
+        return before, before, "skip"
 
-    with Image.open(path) as im:
-        im = ImageOps.exif_transpose(im)
-        # Flatten alpha onto white for JPEG output when needed
-        if im.mode in ("RGBA", "LA") or (im.mode == "P" and "transparency" in im.info):
-            bg = Image.new("RGB", im.size, (255, 255, 255))
-            rgba = im.convert("RGBA")
-            bg.paste(rgba, mask=rgba.split()[-1])
-            im = bg
-        else:
-            im = im.convert("RGB")
+    try:
+        im = open_rgb(path)
+    except Exception as e:
+        return before, before, f"error: {e}"
 
-        w, h = im.size
-        scale = min(1.0, max_edge / max(w, h))
-        if scale < 1.0:
-            im = im.resize((max(1, int(w * scale)), max(1, int(h * scale))), Image.Resampling.LANCZOS)
+    w, h = im.size
+    scale = min(1.0, max_edge / max(w, h))
+    if scale < 1.0:
+        im = im.resize((max(1, int(w * scale)), max(1, int(h * scale))), Image.Resampling.LANCZOS)
 
-        out_path = path if path.suffix.lower() in {".jpg", ".jpeg"} else path.with_suffix(".jpg")
+    out_path = jpeg_out_path(path)
 
-        if dry_run:
-            # Estimate only: encode to measure size without writing
-            from io import BytesIO
+    if dry_run:
+        from io import BytesIO
 
-            buf = BytesIO()
-            im.save(buf, format="JPEG", quality=quality, optimize=True, progressive=True)
-            after = buf.tell()
-            return before, after, after < before
+        buf = BytesIO()
+        im.save(buf, format="JPEG", quality=quality, optimize=True, progressive=True)
+        after = buf.tell()
+        return before, after, "changed" if (after < before or out_path != path) else "skip"
 
-        tmp = out_path.with_suffix(out_path.suffix + ".tmp")
-        im.save(tmp, format="JPEG", quality=quality, optimize=True, progressive=True)
-        after = tmp.stat().st_size
+    tmp = out_path.with_suffix(out_path.suffix + ".tmp")
+    im.save(tmp, format="JPEG", quality=quality, optimize=True, progressive=True)
+    after = tmp.stat().st_size
 
-        if after >= before and out_path == path:
-            tmp.unlink(missing_ok=True)
-            return before, before, False
+    if after >= before and out_path == path and not force_convert:
+        tmp.unlink(missing_ok=True)
+        return before, before, "skip"
 
-        tmp.replace(out_path)
-        if out_path != path and path.exists():
-            path.unlink()
-        return before, after, True
+    tmp.replace(out_path)
+    if out_path.resolve() != path.resolve() and path.exists():
+        path.unlink()
+    return before, after, "changed"
 
 
 def main() -> int:
@@ -122,7 +173,7 @@ def main() -> int:
         "--min-bytes",
         type=int,
         default=400_000,
-        help="Skip files smaller than this (default: 400000)",
+        help="Skip files smaller than this (default: 400000); HEIC always converted",
     )
     parser.add_argument(
         "--dry-run",
@@ -148,13 +199,14 @@ def main() -> int:
     total_before = 0
     total_after = 0
     changed_n = 0
+    error_n = 0
 
     print(f"{'DRY RUN — ' if args.dry_run else ''}Compressing under {root}")
     print(f"max-edge={args.max_edge}  quality={args.quality}  min-bytes={args.min_bytes}")
     print()
 
     for path in files:
-        before, after, changed = compress_one(
+        before, after, status = compress_one(
             path,
             max_edge=args.max_edge,
             quality=args.quality,
@@ -164,19 +216,23 @@ def main() -> int:
         total_before += before
         total_after += after
         rel = path.relative_to(root)
-        if changed:
+        if status == "changed":
             changed_n += 1
             print(f"  {rel}: {human(before)} → {human(after)}")
-        else:
+        elif status == "skip":
             print(f"  {rel}: skip ({human(before)})")
+        else:
+            error_n += 1
+            print(f"  {rel}: {status}", file=sys.stderr)
 
     print()
     print(
-        f"Done. {changed_n}/{len(files)} changed. "
-        f"Total {human(total_before)} → {human(total_after)}"
+        f"Done. {changed_n}/{len(files)} changed"
+        + (f", {error_n} errors" if error_n else "")
+        + f". Total {human(total_before)} → {human(total_after)}"
         + (" (estimated)" if args.dry_run else "")
     )
-    return 0
+    return 1 if error_n else 0
 
 
 if __name__ == "__main__":
