@@ -36,3 +36,5 @@ _site
 _site/
 push.sh
 .DS_Store
+vendor/bundle/
+.bundle/

@@ -143,8 +143,13 @@ html.dark {
     body { background: #1a1a1a; color: #e0e0e0; }
     a { color: #6db4e0; }
 
-    .masthead { background: #1a1a1a; border-bottom: 1px solid #333; }
-    .greedy-nav { background: #1a1a1a; }
+    .masthead {
+      background: rgba(26, 26, 26, 0.62);
+      -webkit-backdrop-filter: saturate(160%) blur(14px);
+              backdrop-filter: saturate(160%) blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .greedy-nav { background: transparent; }
     .greedy-nav a { color: #e0e0e0; background: transparent; }
     .greedy-nav a:hover { color: #fff; }
 
