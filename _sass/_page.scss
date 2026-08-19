@@ -60,19 +60,27 @@
         margin-top: -10em;
     }
   }
+  /* Body copy: intro, news, publications, awards — all 16px */
+  font-size: 16px;
+
   h1 {
     margin-top: 1em;
     padding-bottom: 0.5em;
     border-bottom: 1px solid $border-color;
+    font-size: 1.25em; /* 20px section titles (News, Publications, …) */
   }
 
   p, li, dl {
-    font-size: 1.1em;
+    font-size: inherit;
   }
 
-  /* em compounds on nested lists; keep News sub-items same size as parents */
+  /* kramdown wraps list entries in <p>; don't compound em sizes */
+  li p {
+    font-size: inherit;
+  }
+
   li li {
-    font-size: 1em;
+    font-size: inherit;
   }
 
   /* paragraph indents */
