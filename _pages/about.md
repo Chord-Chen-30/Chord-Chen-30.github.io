@@ -36,17 +36,20 @@ My research focuses on Natural Language Processing (NLP). Recently, I was doing 
 
 # 📝 Publications
 
-- [Tongyi DeepResearch Technical Report](https://arxiv.org/abs/2510.24701), [GitHub](https://github.com/Alibaba-NLP/DeepResearch) 18k+ ⭐️
+- [Apodex-1.0: A Verification-Centric Agent Team for Discoverative Intelligence](https://www.apodex.com/pdf/20260608), Apodex Team
+
+- [Tongyi DeepResearch Technical Report](https://arxiv.org/abs/2510.24701), [GitHub](https://github.com/Alibaba-NLP/DeepResearch) 19.8k+ ⭐️
 
 - [Dependency-Aware Trajectory Refinement for Efficient Multi-Turn Agent Fine-Tuning](https://openreview.net/forum?id=jcfAqlBva7) AACL 2026 Under Review
 
-- [Scaling Agents via Continual Pre-training](https://arxiv.org/abs/2509.13310).
-Liangcai Su\*, Zhen Zhang\*, Guangyu Li\*, **Zhuo Chen**\*, Chenxi Wang\*, Maojia Song, Xinyu Wang\*, etc. In Proceedings of the 2026 International Conference on Learning Representations (ICLR)
-
-- [Efficient Multimodal Planning Agent for Visual Question-Answering](https://arxiv.org/abs/2601.20676) EMNLP 2026 Under Review
+- [Efficient Multimodal Planning Agent for Visual Question-Answering](https://arxiv.org/abs/2601.20676).
+**Zhuo Chen**\*, Xinyu Geng\*, Xinyu Wang, Yong Jiang, Zhen Zhang, Pengjun Xie, Fei Huang, Kewei Tu. (*Equal Contribution) ACL ARR Under Review
 
 - [Argus: Evidence Assembly for Scalable Deep Research Agents](https://arxiv.org/abs/2605.16217).
 Zhen Zhang\*, Liangcai Su\*, **Zhuo Chen**\*, Xiang Lin, Haotian Xu, Kaiyu Yang, Bo An, Simon Du, Lidong Bing, Xinyu Wang. (*Equal Contribution) NeurIPS 2026 Under Review
+
+- [Scaling Agents via Continual Pre-training](https://arxiv.org/abs/2509.13310).
+Liangcai Su\*, Zhen Zhang\*, Guangyu Li\*, **Zhuo Chen**\*, Chenxi Wang\*, Maojia Song, Xinyu Wang\*, etc. In Proceedings of the 2026 International Conference on Learning Representations (ICLR)
 
 - [Detecting Knowledge Boundary of Vision Large Language Models by Sampling-Based Inference](https://aclanthology.org/2025.emnlp-main.1458/).
 **Zhuo Chen**, Xinyu Wang, Yong Jiang, Zhen Zhang, Xinyu Geng, Pengjun Xie, Fei Huang, Kewei Tu. In Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing (EMNLP)
@@ -57,11 +60,14 @@ Zhen Zhang\*, Liangcai Su\*, **Zhuo Chen**\*, Xiang Lin, Haotian Xu, Kaiyu Yang,
 - [Using Interpretation Methods for Model Enhancement](https://aclanthology.org/2023.emnlp-main.28/).
 **Zhuo Chen**, Chengyue Jiang, and Kewei Tu. In Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing (EMNLP)
 
-- [KBM: Delineating Knowledge Boundary for Adaptive Retrieval in Large Language Models](https://aclanthology.org/2025.findings-emnlp.1188/).
-Zhen Zhang, Xinyu Wang, Yong Jiang, **Zhuo Chen**, Feiteng Mu, Mengting Hu, Pengjun Xie, Fei Huang. In Findings of the 2025 Conference on Empirical Methods in Natural Language Processing (EMNLP)
-
 - [Repurposing Synthetic Data for Fine-grained Search Agent Supervision](https://arxiv.org/pdf/2510.24694).
 Yida Zhao, Kuan Li, Xixi Wu, Liwen Zhang, Dingchu Zhang, Baixuan Li, Maojia Song, **Zhuo Chen**, Chenxi Wang, Xinyu Wang, Kewei Tu, Pengjun Xie, Jingren Zhou, Yong Jiang. In Proceedings of the 2026 International Conference on Learning Representations (ICLR)
+
+- [Incorporating Explicit and Implicit Chain-of-Thought as Hybrid Reasoning Paradigm with Guided Latent Space Modeling](https://openreview.net/pdf/04e41ea70b172dd7f34932ffcdbc263e9ff5ce21.pdf).
+Guangyu Li, Zhekai Ge, **Zhuo Chen**, Zhen Zhang, Xinyu Wang, Yong Jiang, Kewei Tu. In Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP)
+
+- [KBM: Delineating Knowledge Boundary for Adaptive Retrieval in Large Language Models](https://aclanthology.org/2025.findings-emnlp.1188/).
+Zhen Zhang, Xinyu Wang, Yong Jiang, Zile Qiao, **Zhuo Chen**, Guangyu Li, Feiteng Mu, Mengting Hu, Pengjun Xie, Fei Huang. In Findings of the 2025 Conference on Empirical Methods in Natural Language Processing (EMNLP)
 
 <!-- <div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1"> -->
