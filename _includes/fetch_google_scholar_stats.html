@@ -1,7 +1,13 @@
 <script>
     $(document).ready(function () {
-        {% if site.google_scholar_stats_use_cdn and site.data.google_scholar_stats.commit %}
-        var gsDataUrl = 'https://cdn.jsdelivr.net/gh/{{ site.repository }}@{{ site.data.google_scholar_stats.commit }}/gs_data.json'
+        {%- comment -%}
+          Read the google-scholar-stats branch, not a pinned commit.
+          GITHUB_TOKEN pushes that update _data/google_scholar_stats.json
+          do not trigger Pages, so a baked-in commit hash goes stale until
+          the next human push.
+        {%- endcomment %}
+        {% if site.google_scholar_stats_use_cdn %}
+        var gsDataUrl = 'https://cdn.jsdelivr.net/gh/{{ site.repository }}@google-scholar-stats/gs_data.json'
         var gsDataFallbackUrl = 'https://raw.githubusercontent.com/{{ site.repository }}/google-scholar-stats/gs_data.json'
         {% else %}
         var gsDataUrl = 'https://raw.githubusercontent.com/{{ site.repository }}/google-scholar-stats/gs_data.json'
