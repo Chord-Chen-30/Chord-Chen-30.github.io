@@ -1,9 +1,19 @@
 <script>
   (function () {
+    // Match GitHub repo-page compact counts: 337, 1.1k, 19.9k (never 19.9 → 20k).
     function formatStars(n) {
-      if (n >= 1000) {
-        var k = n / 1000;
-        return (k >= 10 ? Math.round(k) : Math.round(k * 10) / 10) + 'k';
+      if (n < 1000) return String(n);
+      var units = [
+        { value: 1e9, suffix: 'B' },
+        { value: 1e6, suffix: 'M' },
+        { value: 1e3, suffix: 'k' }
+      ];
+      for (var i = 0; i < units.length; i++) {
+        if (n >= units[i].value) {
+          var rounded = Math.round((n / units[i].value) * 10) / 10;
+          var text = Number.isInteger(rounded) ? String(rounded) : rounded.toFixed(1);
+          return text + units[i].suffix;
+        }
       }
       return String(n);
     }
