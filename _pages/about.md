@@ -42,7 +42,7 @@ My research focuses on Natural Language Processing (NLP). Recently, I was doing 
 
 - [Apodex 1.1: Scaling Agentic Intelligence for Complex Work](https://arxiv.org/abs/2608.23283), [GitHub](https://github.com/ApodexAI/FrontierAgent) <span class="github-stars" data-repo="ApodexAI/FrontierAgent">300+</span> ⭐️
 
-- [Apodex-1.0: A Verification-Centric Agent Team for Discoverative Intelligence](https://www.apodex.com/pdf/20260608), Apodex Team
+- [Apodex-1.0: A Verification-Centric Agent Team for Discoverative Intelligence](https://www.apodex.com/pdf/20260608), Apodex Team. <span class="hf-downloads" data-collection="apodex/apodex-1">12,000+ Downloads last month</span>
 
 - [Tongyi DeepResearch Technical Report](https://arxiv.org/abs/2510.24701), [GitHub](https://github.com/Alibaba-NLP/DeepResearch) <span class="github-stars" data-repo="Alibaba-NLP/DeepResearch">19.9k</span> ⭐️
 

@@ -1,0 +1,34 @@
+<script>
+  (function () {
+    function formatCount(n) {
+      return n.toLocaleString('en-US');
+    }
+
+    function sumCollectionDownloads(data) {
+      if (!data || !Array.isArray(data.items)) return null;
+      var total = 0;
+      for (var i = 0; i < data.items.length; i++) {
+        var d = data.items[i].downloads;
+        if (typeof d === 'number') total += d;
+      }
+      return total;
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var els = document.querySelectorAll('.hf-downloads[data-collection]');
+      Array.prototype.forEach.call(els, function (el) {
+        var collection = el.getAttribute('data-collection');
+        if (!collection) return;
+        fetch('https://huggingface.co/api/collections/' + collection)
+          .then(function (res) { return res.ok ? res.json() : Promise.reject(res.status); })
+          .then(function (data) {
+            var total = sumCollectionDownloads(data);
+            if (typeof total === 'number') {
+              el.textContent = formatCount(total) + ' Downloads last month';
+            }
+          })
+          .catch(function () { /* keep fallback text in the span */ });
+      });
+    });
+  })();
+</script>
