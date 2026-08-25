@@ -79,8 +79,9 @@
     font-size: inherit;
   }
 
+  /* nested News links one step smaller than top-level items */
   li li {
-    font-size: inherit;
+    font-size: 0.875em; /* 14px when parent content is 16px */
   }
 
   /* paragraph indents */

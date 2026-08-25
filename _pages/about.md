@@ -27,13 +27,13 @@ My research focuses on Natural Language Processing (NLP). Recently, I was doing 
 
 # 🔥 News
 
-- *2026.8* Release [Apodex 1.1: Scaling Agentic Intelligence for Complex Work](https://www.apodex.com/blog/apodex-1.1-scaling-agentic-intelligence-for-complex-work)!
-  - [Paper](https://arxiv.org/abs/2608.23283) \| [Github](https://github.com/ApodexAI/FrontierAgent) \| [Model Weights](https://huggingface.co/collections/apodex/apodex-11) \| [API](https://platform.apodex.ai)
-- *2026.6* Release [Apodex 1.0: Self-Evolving 
-Heavy-Duty Solver](https://www.apodex.com/)!
+- *2026.8* Release Apodex 1.1: Scaling Agentic Intelligence for Complex Work!
+  - [Website](https://www.apodex.com/blog/apodex-1.1-scaling-agentic-intelligence-for-complex-work) \| [Paper](https://arxiv.org/abs/2608.23283) \| [Github](https://github.com/ApodexAI/FrontierAgent) \| [Model Weights](https://huggingface.co/collections/apodex/apodex-11) \| [API](https://platform.apodex.ai)
+- *2026.6* Release Apodex 1.0: Self-Evolving Heavy-Duty Solver!
+  - [Website](https://www.apodex.com/) \| [Model Weights](https://huggingface.co/collections/apodex/apodex-1)
 - *2026.1* Two papers accepted by ICLR 2026!
-- *2025.11* [Tongyi DeepResearch Technical Report](https://arxiv.org/abs/2510.24701)!
-  - [Github](https://github.com/Alibaba-NLP/DeepResearch) \| [Web Page](https://tongyi-agent.github.io/) \| [Blog](https://tongyi-agent.github.io/blog/introducing-tongyi-deep-research/) \| [HuggingFace](https://huggingface.co/Alibaba-NLP/Tongyi-DeepResearch-30B-A3B) \| [ModelScope](https://modelscope.cn/models/iic/Tongyi-DeepResearch-30B-A3B) \| [Huggingface daily paper](https://huggingface.co/papers/date/2025-09-17)
+- *2025.11* Release Tongyi DeepResearch Technical Report!
+  - [Paper](https://arxiv.org/abs/2510.24701) \| [Github](https://github.com/Alibaba-NLP/DeepResearch) \| [Web Page](https://tongyi-agent.github.io/) \| [Blog](https://tongyi-agent.github.io/blog/introducing-tongyi-deep-research/) \| [HuggingFace](https://huggingface.co/Alibaba-NLP/Tongyi-DeepResearch-30B-A3B) \| [ModelScope](https://modelscope.cn/models/iic/Tongyi-DeepResearch-30B-A3B) \| [Huggingface daily paper](https://huggingface.co/papers/date/2025-09-17)
 - *2025.9* Check out our open-source Tongyi DeepResearch Agent after Continue Pre-train
   - Paper: [Scaling Agents via Continual Pre-training](https://arxiv.org/abs/2509.13310)
 
