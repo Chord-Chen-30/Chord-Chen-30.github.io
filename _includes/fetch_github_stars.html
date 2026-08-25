@@ -1,0 +1,31 @@
+<script>
+  (function () {
+    function formatStars(n) {
+      if (n >= 1000) {
+        var k = n / 1000;
+        return (k >= 10 ? Math.round(k) : Math.round(k * 10) / 10) + 'k';
+      }
+      return String(n);
+    }
+
+    function fillStars(el, count) {
+      el.textContent = formatStars(count);
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var els = document.querySelectorAll('.github-stars[data-repo]');
+      Array.prototype.forEach.call(els, function (el) {
+        var repo = el.getAttribute('data-repo');
+        if (!repo) return;
+        fetch('https://api.github.com/repos/' + repo)
+          .then(function (res) { return res.ok ? res.json() : Promise.reject(res.status); })
+          .then(function (data) {
+            if (typeof data.stargazers_count === 'number') {
+              fillStars(el, data.stargazers_count);
+            }
+          })
+          .catch(function () { /* keep fallback text in the span */ });
+      });
+    });
+  })();
+</script>

@@ -27,18 +27,24 @@ My research focuses on Natural Language Processing (NLP). Recently, I was doing 
 
 # 🔥 News
 
+- *2026.8* Release [Apodex 1.1](https://www.apodex.com/blog/apodex-1.1-scaling-agentic-intelligence-for-complex-work): Scaling Agentic Intelligence for Complex Work!
+  - [Paper](https://arxiv.org/abs/2608.23283) \| [Github](https://github.com/ApodexAI/FrontierAgent) \| [Model Weights](https://huggingface.co/collections/apodex/apodex-11) \| [API](https://platform.apodex.ai)
+- *2026.6* Release [Apodex 1.0](https://www.apodex.com/): Self-Evolving 
+Heavy-Duty Solver!
 - *2026.1* Two papers accepted by ICLR 2026!
 - *2025.11* [Tongyi DeepResearch Technical Report](https://arxiv.org/abs/2510.24701)!
-  - ⭐ [Github](https://github.com/Alibaba-NLP/DeepResearch) \| [Web Page](https://tongyi-agent.github.io/) \| [Blog](https://tongyi-agent.github.io/blog/introducing-tongyi-deep-research/) \| [HuggingFace](https://huggingface.co/Alibaba-NLP/Tongyi-DeepResearch-30B-A3B) \| [ModelScope](https://modelscope.cn/models/iic/Tongyi-DeepResearch-30B-A3B) \| [Huggingface daily paper](https://huggingface.co/papers/date/2025-09-17)
+  - [Github](https://github.com/Alibaba-NLP/DeepResearch) \| [Web Page](https://tongyi-agent.github.io/) \| [Blog](https://tongyi-agent.github.io/blog/introducing-tongyi-deep-research/) \| [HuggingFace](https://huggingface.co/Alibaba-NLP/Tongyi-DeepResearch-30B-A3B) \| [ModelScope](https://modelscope.cn/models/iic/Tongyi-DeepResearch-30B-A3B) \| [Huggingface daily paper](https://huggingface.co/papers/date/2025-09-17)
 - *2025.9* Check out our open-source Tongyi DeepResearch Agent after Continue Pre-train
   - Paper: [Scaling Agents via Continual Pre-training](https://arxiv.org/abs/2509.13310)
 
 
 # 📝 Publications
 
+- [Apodex 1.1: Scaling Agentic Intelligence for Complex Work](https://arxiv.org/abs/2608.23283), [GitHub](https://github.com/ApodexAI/FrontierAgent) <span class="github-stars" data-repo="ApodexAI/FrontierAgent">300+</span> ⭐️
+
 - [Apodex-1.0: A Verification-Centric Agent Team for Discoverative Intelligence](https://www.apodex.com/pdf/20260608), Apodex Team
 
-- [Tongyi DeepResearch Technical Report](https://arxiv.org/abs/2510.24701), [GitHub](https://github.com/Alibaba-NLP/DeepResearch) 19.8k+ ⭐️
+- [Tongyi DeepResearch Technical Report](https://arxiv.org/abs/2510.24701), [GitHub](https://github.com/Alibaba-NLP/DeepResearch) <span class="github-stars" data-repo="Alibaba-NLP/DeepResearch">19.8k</span> ⭐️
 
 - [Dependency-Aware Trajectory Refinement for Efficient Multi-Turn Agent Fine-Tuning](https://openreview.net/forum?id=jcfAqlBva7) AACL 2026 Under Review
 
