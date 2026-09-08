@@ -34,8 +34,8 @@ My research focuses on Natural Language Processing (NLP). Recently, I was doing 
 - *2026.1* Two papers accepted by ICLR 2026!
 - *2025.11* Release Tongyi DeepResearch Technical Report!
   - [Paper](https://arxiv.org/abs/2510.24701) \| [Github](https://github.com/Alibaba-NLP/DeepResearch) \| [Web Page](https://tongyi-agent.github.io/) \| [Blog](https://tongyi-agent.github.io/blog/introducing-tongyi-deep-research/) \| [HuggingFace](https://huggingface.co/Alibaba-NLP/Tongyi-DeepResearch-30B-A3B) \| [ModelScope](https://modelscope.cn/models/iic/Tongyi-DeepResearch-30B-A3B) \| [Huggingface daily paper](https://huggingface.co/papers/date/2025-09-17)
-<!-- - *2025.9* Check out our open-source Tongyi DeepResearch Agent after Continue Pre-train
-  - Paper: [Scaling Agents via Continual Pre-training](https://arxiv.org/abs/2509.13310) -->
+- *2025.9* Early work on mid-training (Agentic CPT) to strengthen agentic capabilities
+  - [Paper](https://arxiv.org/abs/2509.13310): Scaling Agents via Continual Pre-training
 
 
 # 📝 Publications
@@ -46,10 +46,11 @@ My research focuses on Natural Language Processing (NLP). Recently, I was doing 
 
 - [Tongyi DeepResearch Technical Report](https://arxiv.org/abs/2510.24701), [GitHub](https://github.com/Alibaba-NLP/DeepResearch) <span class="github-stars" data-repo="Alibaba-NLP/DeepResearch">19.9k</span> ⭐️
 
-- [Dependency-Aware Trajectory Refinement for Efficient Multi-Turn Agent Fine-Tuning](https://openreview.net/forum?id=jcfAqlBva7) AACL 2026 Under Review
+- [Dependency-Aware Trajectory Refinement for Efficient Multi-Turn Agent Fine-Tuning](https://openreview.net/forum?id=jcfAqlBva7).
+In Findings of the Association for Computational Linguistics: AACL 2026
 
 - [Efficient Multimodal Planning Agent for Visual Question-Answering](https://arxiv.org/abs/2601.20676).
-**Zhuo Chen**\*, Xinyu Geng\*, Xinyu Wang, Yong Jiang, Zhen Zhang, Pengjun Xie, Fei Huang, Kewei Tu. (*Equal Contribution) ACL ARR Under Review
+**Zhuo Chen**\*, Xinyu Geng\*, Xinyu Wang, Yong Jiang, Zhen Zhang, Pengjun Xie, Fei Huang, Kewei Tu. (*Equal Contribution). In Findings of the Association for Computational Linguistics: AACL 2026
 
 - [Argus: Evidence Assembly for Scalable Deep Research Agents](https://arxiv.org/abs/2605.16217).
 Zhen Zhang\*, Liangcai Su\*, **Zhuo Chen**\*, Xiang Lin, Haotian Xu, Kaiyu Yang, Bo An, Simon Du, Lidong Bing, Xinyu Wang. (*Equal Contribution) NeurIPS 2026 Under Review
