@@ -1,3 +1,5 @@
 jsonpickle==4.0.5
 scholarly==1.7.11
 httpx==0.23.3
+# scholarly still imports bibtexparser.bibdatabase (v1 API); v2 breaks import
+bibtexparser==1.4.1
