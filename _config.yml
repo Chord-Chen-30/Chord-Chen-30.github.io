@@ -66,6 +66,7 @@ include:
   - _pages
   - files
 exclude:
+  - apps
   - docs
   - google_scholar_crawler
   - "*.sublime-project"

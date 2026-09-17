@@ -36,6 +36,21 @@ jobs:
           source: ./
           destination: ./_site
 
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: apps/spidey-tracker/package-lock.json
+
+      - name: Build Spidey Tracker
+        working-directory: apps/spidey-tracker
+        run: |
+          npm ci
+          npm run build:gh-pages
+          mkdir -p ../../_site/spidey-tracker
+          cp -R dist/. ../../_site/spidey-tracker/
+
       - name: Add .nojekyll
         run: sudo touch _site/.nojekyll && sudo chown -R "$USER:$USER" _site && ls -la _site | head
 
