@@ -26,8 +26,11 @@ export const darkRasterFallback: StyleSpecification = {
   layers: [{ id: 'carto-base', type: 'raster', source: 'carto' }],
 }
 
-/** Alias used by main — prefer OFM URL string. */
-export const spideyMapStyle = SPIDEY_BASE_STYLE
+/**
+ * CARTO is the primary style because it degrades more reliably on networks
+ * where OpenFreeMap's vector tiles load without surfacing a MapLibre error.
+ */
+export const spideyMapStyle: StyleSpecification = darkRasterFallback
 
 /**
  * Recolor OFM dark layers to official Spidey Tracker map palette.
