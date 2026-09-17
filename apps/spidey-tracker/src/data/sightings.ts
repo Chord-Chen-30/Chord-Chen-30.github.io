@@ -235,6 +235,18 @@ export const sightings: Sighting[] = [
     pinColor: colorFromId('sha-1'),
   },
   {
+    id: 'hgh-1',
+    kind: 'confirmed',
+    title: 'West Lake signal',
+    city: 'Hangzhou',
+    country: 'China',
+    lat: 30.2354,
+    lng: 120.1417,
+    time: '2026-08-07 20:10',
+    blurb: 'A confirmed sighting near the lakeside, backed by multiple photo reports.',
+    pinColor: colorFromId('hgh-1'),
+  },
+  {
     id: 'cgo-1',
     kind: 'rumored',
     title: 'Erqi plaza flash',

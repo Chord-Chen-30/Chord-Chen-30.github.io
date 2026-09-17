@@ -142,7 +142,10 @@ def compress_one(
         return before, before, "skip"
 
     tmp.replace(out_path)
-    if out_path.resolve() != path.resolve() and path.exists():
+    # On macOS, `IMG.JPG` and `IMG.jpg` can refer to the same file. Compare
+    # file identities after replacing the temporary output so we do not delete
+    # the newly compressed file merely because its extension casing changed.
+    if path.exists() and out_path.exists() and not path.samefile(out_path):
         path.unlink()
     return before, after, "changed"
 
