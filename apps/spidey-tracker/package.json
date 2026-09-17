@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "build:gh-pages": "tsc && VITE_BASE=/spidey-tracker/ vite build && node scripts/jekyllize-index.mjs",
+    "build:gh-pages": "tsc && VITE_BASE=/spidey-tracker/ vite build",
     "compress:galleries": "python3 scripts/compress-gallery-images.py public/galleries",
     "preview": "vite preview"
   },
