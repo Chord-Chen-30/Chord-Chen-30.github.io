@@ -16,7 +16,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-Hi! I'm Zhuo Chen (陈卓), a Ph.D. student at ShanghaiTech University, supervised by Prof. Kewei Tu.
+Hi! I'm Zhuo Chen (陈卓), a Ph.D. student at ShanghaiTech University, supervised by Prof. [Kewei Tu](https://faculty.sist.shanghaitech.edu.cn/faculty/tukw/).
 
 My research focuses on Natural Language Processing (NLP). Recently, I was doing research related to **(Multimodal) LLMs**, **RAG** and **Continue Pre-train (CPT) towards DeepResearch** of LLMs at Tongyi Lab, Alibaba. I am currently doing research related to **DeepResearch agentic models Mid-training and Post-training**. 
 
@@ -40,20 +40,26 @@ My research focuses on Natural Language Processing (NLP). Recently, I was doing 
 
 # 📝 Publications
 
+<span style="font-size: 0.85em; font-weight: normal;">(&#42; Equal Contribution)</span>
+
 - [Apodex 1.1: Scaling Agentic Intelligence for Complex Work](https://arxiv.org/abs/2608.23283), [GitHub](https://github.com/ApodexAI/FrontierAgent) <span class="github-stars" data-repo="ApodexAI/FrontierAgent">2k</span> ⭐️. <span class="hf-downloads" data-collection="apodex/apodex-11">16,543 Downloads last month</span>
 
 - [Apodex-1.0: A Verification-Centric Agent Team for Discoverative Intelligence](https://www.apodex.com/pdf/20260608), [GitHub](https://github.com/ApodexAI/AgentHarness) <span class="github-stars" data-repo="ApodexAI/AgentHarness">434</span> ⭐️. <span class="hf-downloads" data-collection="apodex/apodex-1">3,270 Downloads last month</span>
 
+- [FrontierChallenge: Evaluating Scientific Workflow Completion](https://apodexai.github.io/FrontierAgent/benchmarks/FrontierChallenge/).
+Liangcai Su\*, Zhaopeng Feng\*, **Zhuo Chen**\*, Zhen Zhang\*, Xiang Lin, Ruilin Li, Handuo Zhang, Ning Wang, Kailong Wen, Yueqi Guo, Feng Xing, Yiling Guo, Brian Wang, Chenxiong Qian, Simon Shaolei Du, Lidong Bing, Xinyu Wang.
+
 - [Tongyi DeepResearch Technical Report](https://arxiv.org/abs/2510.24701), [GitHub](https://github.com/Alibaba-NLP/DeepResearch) <span class="github-stars" data-repo="Alibaba-NLP/DeepResearch">19.9k</span> ⭐️
 
-- [Dependency-Aware Trajectory Refinement for Efficient Multi-Turn Agent Fine-Tuning](https://openreview.net/forum?id=jcfAqlBva7).
+- [Dependency-Aware Trajectory Refinement for Efficient Multi-Turn Agent Fine-Tuning](https://arxiv.org/abs/2609.18417).
+**Zhuo Chen**, Zhen Zhang, Xinyu Wang, Kewei Tu.
 In Findings of the Association for Computational Linguistics: AACL 2026
 
 - [Efficient Multimodal Planning Agent for Visual Question-Answering](https://arxiv.org/abs/2601.20676).
-**Zhuo Chen**\*, Xinyu Geng\*, Xinyu Wang, Yong Jiang, Zhen Zhang, Pengjun Xie, Fei Huang, Kewei Tu. (*Equal Contribution). In Findings of the Association for Computational Linguistics: AACL 2026
+**Zhuo Chen**\*, Xinyu Geng\*, Xinyu Wang, Yong Jiang, Zhen Zhang, Pengjun Xie, Fei Huang, Kewei Tu. In Findings of the Association for Computational Linguistics: AACL 2026
 
 - [Argus: Evidence Assembly for Scalable Deep Research Agents](https://arxiv.org/abs/2605.16217).
-Zhen Zhang\*, Liangcai Su\*, **Zhuo Chen**\*, Xiang Lin, Haotian Xu, Kaiyu Yang, Bo An, Simon Du, Lidong Bing, Xinyu Wang. (*Equal Contribution) NeurIPS 2026 Under Review
+Zhen Zhang\*, Liangcai Su\*, **Zhuo Chen**\*, Xiang Lin, Haotian Xu, Kaiyu Yang, Bo An, Simon Du, Lidong Bing, Xinyu Wang.
 
 - [Scaling Agents via Continual Pre-training](https://arxiv.org/abs/2509.13310).
 Liangcai Su\*, Zhen Zhang\*, Guangyu Li\*, **Zhuo Chen**\*, Chenxi Wang\*, Maojia Song, Xinyu Wang\*, etc. In Proceedings of the 2026 International Conference on Learning Representations (ICLR)
@@ -100,7 +106,7 @@ Zhen Zhang, Xinyu Wang, Yong Jiang, Zile Qiao, **Zhuo Chen**, Guangyu Li, Feiten
 # 📖 Educations
 
 - *2026.4-now*, NTU, College of Computing and Data Science, Visiting Student advised by Bo An.
-- *2021-now*, ShanghaiTech University, Ph.D. advised by Prof. Kewei Tu.
+- *2021-now*, ShanghaiTech University, Ph.D. advised by Prof. [Kewei Tu](https://faculty.sist.shanghaitech.edu.cn/faculty/tukw/).
 - *2017-2021*, ShanghaiTech University, B.S. in Computer Science.
 
 
@@ -112,5 +118,5 @@ Zhen Zhang, Xinyu Wang, Yong Jiang, Zile Qiao, **Zhuo Chen**, Guangyu Li, Feiten
 
 # 💻 Internships
 
-- *2026.04 - now*, **Apodex**, Research Intern.
+- *2026.04 - 2026.09*, Apodex, Research Intern.
 - *2023.08 - 2026.03*, Tongyi Lab, Alibaba (DAMO Academy previously).
