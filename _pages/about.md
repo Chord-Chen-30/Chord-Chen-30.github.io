@@ -52,8 +52,7 @@ Liangcai Su\*, Zhaopeng Feng\*, **Zhuo Chen**\*, Zhen Zhang\*, Xiang Lin, Ruilin
 - [Tongyi DeepResearch Technical Report](https://arxiv.org/abs/2510.24701), [GitHub](https://github.com/Alibaba-NLP/DeepResearch) <span class="github-stars" data-repo="Alibaba-NLP/DeepResearch">20.1k</span> ⭐️
 
 - [Dependency-Aware Trajectory Refinement for Efficient Multi-Turn Agent Fine-Tuning](https://arxiv.org/abs/2609.18417).
-**Zhuo Chen**, Zhen Zhang, Xinyu Wang, Kewei Tu.
-In Findings of the Association for Computational Linguistics: AACL 2026
+**Zhuo Chen**, Zhen Zhang, Xinyu Wang, Kewei Tu. In Findings of the Association for Computational Linguistics: AACL 2026
 
 - [Efficient Multimodal Planning Agent for Visual Question-Answering](https://arxiv.org/abs/2601.20676).
 **Zhuo Chen**\*, Xinyu Geng\*, Xinyu Wang, Yong Jiang, Zhen Zhang, Pengjun Xie, Fei Huang, Kewei Tu. In Findings of the Association for Computational Linguistics: AACL 2026
