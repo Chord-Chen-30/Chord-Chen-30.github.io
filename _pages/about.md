@@ -42,14 +42,14 @@ My research focuses on Natural Language Processing (NLP). Recently, I was doing 
 
 <span style="font-size: 0.85em; font-weight: normal;">(&#42; Equal Contribution)</span>
 
-- [Apodex 1.1: Scaling Agentic Intelligence for Complex Work](https://arxiv.org/abs/2608.23283), [GitHub](https://github.com/ApodexAI/FrontierAgent) <span class="github-stars" data-repo="ApodexAI/FrontierAgent">2k</span> ⭐️. <span class="hf-downloads" data-collection="apodex/apodex-11">16,543 Downloads last month</span>
+- [Apodex 1.1: Scaling Agentic Intelligence for Complex Work](https://arxiv.org/abs/2608.23283), [GitHub](https://github.com/ApodexAI/FrontierAgent) <span class="github-stars" data-repo="ApodexAI/FrontierAgent">5.4k</span> ⭐️. <span class="hf-downloads" data-collection="apodex/apodex-11">6,586 Downloads last month</span>
 
-- [Apodex-1.0: A Verification-Centric Agent Team for Discoverative Intelligence](https://www.apodex.com/pdf/20260608), [GitHub](https://github.com/ApodexAI/AgentHarness) <span class="github-stars" data-repo="ApodexAI/AgentHarness">434</span> ⭐️. <span class="hf-downloads" data-collection="apodex/apodex-1">3,270 Downloads last month</span>
+- [Apodex-1.0: A Verification-Centric Agent Team for Discoverative Intelligence](https://www.apodex.com/pdf/20260608), [GitHub](https://github.com/ApodexAI/AgentHarness) <span class="github-stars" data-repo="ApodexAI/AgentHarness">459</span> ⭐️. <span class="hf-downloads" data-collection="apodex/apodex-1">11,713 Downloads last month</span>
 
 - [FrontierChallenge: Evaluating Scientific Workflow Completion](https://apodexai.github.io/FrontierAgent/benchmarks/FrontierChallenge/).
 Liangcai Su\*, Zhaopeng Feng\*, **Zhuo Chen**\*, Zhen Zhang\*, Xiang Lin, Ruilin Li, Handuo Zhang, Ning Wang, Kailong Wen, Yueqi Guo, Feng Xing, Yiling Guo, Brian Wang, Chenxiong Qian, Simon Shaolei Du, Lidong Bing, Xinyu Wang.
 
-- [Tongyi DeepResearch Technical Report](https://arxiv.org/abs/2510.24701), [GitHub](https://github.com/Alibaba-NLP/DeepResearch) <span class="github-stars" data-repo="Alibaba-NLP/DeepResearch">19.9k</span> ⭐️
+- [Tongyi DeepResearch Technical Report](https://arxiv.org/abs/2510.24701), [GitHub](https://github.com/Alibaba-NLP/DeepResearch) <span class="github-stars" data-repo="Alibaba-NLP/DeepResearch">20.1k</span> ⭐️
 
 - [Dependency-Aware Trajectory Refinement for Efficient Multi-Turn Agent Fine-Tuning](https://arxiv.org/abs/2609.18417).
 **Zhuo Chen**, Zhen Zhang, Xinyu Wang, Kewei Tu.
