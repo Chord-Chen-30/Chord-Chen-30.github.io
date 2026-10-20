@@ -27,14 +27,14 @@ My research focuses on Natural Language Processing (NLP). Recently, I was doing 
 
 # 🔥 News
 
-- *2026.8* Release Apodex 1.1: Scaling Agentic Intelligence for Complex Work!
-  - [Website](https://www.apodex.com/blog/apodex-1.1-scaling-agentic-intelligence-for-complex-work) \| [Paper](https://arxiv.org/abs/2608.23283) \| [Github](https://github.com/ApodexAI/FrontierAgent) \| [Model Weights](https://huggingface.co/collections/apodex/apodex-11) \| [API](https://platform.apodex.ai)
-- *2026.6* Release Apodex 1.0: Self-Evolving Heavy-Duty Solver!
-  - [Website](https://www.apodex.com/blog/apodex-1.0) \| [Paper](https://www.apodex.com/pdf/20260608) \| [Github](https://github.com/ApodexAI/AgentHarness) \| [Model Weights](https://huggingface.co/collections/apodex/apodex-1)
-- *2026.1* Two papers accepted by ICLR 2026!
+- *2026.08* Release Apodex 1.1: Scaling Agentic Intelligence for Complex Work!
+  - [Website](https://www.apodex.com/blog/apodex-1.1-scaling-agentic-intelligence-for-complex-work) \| [Paper](https://arxiv.org/abs/2608.23283) \| [GitHub](https://github.com/ApodexAI/FrontierAgent) \| [Model Weights](https://huggingface.co/collections/apodex/apodex-11) \| [API](https://platform.apodex.ai)
+- *2026.06* Release Apodex 1.0: Self-Evolving Heavy-Duty Solver!
+  - [Website](https://www.apodex.com/blog/apodex-1.0) \| [Paper](https://www.apodex.com/pdf/20260608) \| [GitHub](https://github.com/ApodexAI/AgentHarness) \| [Model Weights](https://huggingface.co/collections/apodex/apodex-1)
+- *2026.01* Two papers accepted by ICLR 2026!
 - *2025.11* Release Tongyi DeepResearch Technical Report!
-  - [Paper](https://arxiv.org/abs/2510.24701) \| [Github](https://github.com/Alibaba-NLP/DeepResearch) \| [Web Page](https://tongyi-agent.github.io/) \| [Blog](https://tongyi-agent.github.io/blog/introducing-tongyi-deep-research/) \| [HuggingFace](https://huggingface.co/Alibaba-NLP/Tongyi-DeepResearch-30B-A3B) \| [ModelScope](https://modelscope.cn/models/iic/Tongyi-DeepResearch-30B-A3B) \| [Huggingface daily paper](https://huggingface.co/papers/date/2025-09-17)
-- *2025.9* Early work on mid-training (Agentic CPT) to strengthen agentic capabilities
+  - [Paper](https://arxiv.org/abs/2510.24701) \| [GitHub](https://github.com/Alibaba-NLP/DeepResearch) \| [Web Page](https://tongyi-agent.github.io/) \| [Blog](https://tongyi-agent.github.io/blog/introducing-tongyi-deep-research/) \| [Hugging Face](https://huggingface.co/Alibaba-NLP/Tongyi-DeepResearch-30B-A3B) \| [ModelScope](https://modelscope.cn/models/iic/Tongyi-DeepResearch-30B-A3B) \| [Hugging Face Daily Paper](https://huggingface.co/papers/date/2025-09-17)
+- *2025.09* Early work on mid-training (Agentic CPT) to strengthen agentic capabilities
   - [Paper](https://arxiv.org/abs/2509.13310): Scaling Agents via Continual Pre-training
 
 
@@ -42,44 +42,44 @@ My research focuses on Natural Language Processing (NLP). Recently, I was doing 
 
 <span style="font-size: 0.85em; font-weight: normal;">(&#42; Equal Contribution)</span>
 
-- [Apodex 1.1: Scaling Agentic Intelligence for Complex Work](https://arxiv.org/abs/2608.23283), [GitHub](https://github.com/ApodexAI/FrontierAgent) <span class="github-stars" data-repo="ApodexAI/FrontierAgent">5.4k</span> ⭐️. <span class="hf-downloads" data-collection="apodex/apodex-11">6,586 Downloads last month</span>
+- [Apodex 1.1: Scaling Agentic Intelligence for Complex Work](https://arxiv.org/abs/2608.23283), [GitHub](https://github.com/ApodexAI/FrontierAgent) <span class="github-stars" data-repo="ApodexAI/FrontierAgent">5.4k</span> ⭐️. <span class="hf-downloads" data-collection="apodex/apodex-11">6,586 Downloads last month</span>.
 
-- [Apodex-1.0: A Verification-Centric Agent Team for Discoverative Intelligence](https://www.apodex.com/pdf/20260608), [GitHub](https://github.com/ApodexAI/AgentHarness) <span class="github-stars" data-repo="ApodexAI/AgentHarness">459</span> ⭐️. <span class="hf-downloads" data-collection="apodex/apodex-1">11,713 Downloads last month</span>
+- [Apodex-1.0: A Verification-Centric Agent Team for Discoverative Intelligence](https://www.apodex.com/pdf/20260608), [GitHub](https://github.com/ApodexAI/AgentHarness) <span class="github-stars" data-repo="ApodexAI/AgentHarness">459</span> ⭐️. <span class="hf-downloads" data-collection="apodex/apodex-1">11,713 Downloads last month</span>.
 
 - [FrontierChallenge: Evaluating Scientific Workflow Completion](https://apodexai.github.io/FrontierAgent/benchmarks/FrontierChallenge/).
 Liangcai Su\*, Zhaopeng Feng\*, **Zhuo Chen**\*, Zhen Zhang\*, Xiang Lin, Ruilin Li, Handuo Zhang, Ning Wang, Kailong Wen, Yueqi Guo, Feng Xing, Yiling Guo, Brian Wang, Chenxiong Qian, Simon Shaolei Du, Lidong Bing, Xinyu Wang.
 
-- [Tongyi DeepResearch Technical Report](https://arxiv.org/abs/2510.24701), [GitHub](https://github.com/Alibaba-NLP/DeepResearch) <span class="github-stars" data-repo="Alibaba-NLP/DeepResearch">20.1k</span> ⭐️
+- [Tongyi DeepResearch Technical Report](https://arxiv.org/abs/2510.24701), [GitHub](https://github.com/Alibaba-NLP/DeepResearch) <span class="github-stars" data-repo="Alibaba-NLP/DeepResearch">20.1k</span> ⭐️.
 
 - [Dependency-Aware Trajectory Refinement for Efficient Multi-Turn Agent Fine-Tuning](https://arxiv.org/abs/2609.18417).
-**Zhuo Chen**, Zhen Zhang, Xinyu Wang, Kewei Tu. In Findings of the 2026 Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics (AACL)
+**Zhuo Chen**, Zhen Zhang, Xinyu Wang, Kewei Tu. In Findings of the 2026 Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics (AACL).
 
 - [Efficient Multimodal Planning Agent for Visual Question-Answering](https://arxiv.org/abs/2601.20676).
-**Zhuo Chen**\*, Xinyu Geng\*, Xinyu Wang, Yong Jiang, Zhen Zhang, Pengjun Xie, Fei Huang, Kewei Tu. In Findings of the 2026 Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics (AACL)
+**Zhuo Chen**\*, Xinyu Geng\*, Xinyu Wang, Yong Jiang, Zhen Zhang, Pengjun Xie, Fei Huang, Kewei Tu. In Findings of the 2026 Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics (AACL).
 
 - [Argus: Evidence Assembly for Scalable Deep Research Agents](https://arxiv.org/abs/2605.16217).
 Zhen Zhang\*, Liangcai Su\*, **Zhuo Chen**\*, Xiang Lin, Haotian Xu, Kaiyu Yang, Bo An, Simon Du, Lidong Bing, Xinyu Wang.
 
 - [Scaling Agents via Continual Pre-training](https://arxiv.org/abs/2509.13310).
-Liangcai Su\*, Zhen Zhang\*, Guangyu Li\*, **Zhuo Chen**\*, Chenxi Wang\*, Maojia Song, Xinyu Wang\*, etc. In Proceedings of the 2026 International Conference on Learning Representations (ICLR)
+Liangcai Su\*, Zhen Zhang\*, Guangyu Li\*, **Zhuo Chen**\*, Chenxi Wang\*, Maojia Song, Xinyu Wang\*, etc. In Proceedings of the 2026 International Conference on Learning Representations (ICLR).
 
 - [Detecting Knowledge Boundary of Vision Large Language Models by Sampling-Based Inference](https://aclanthology.org/2025.emnlp-main.1458/).
-**Zhuo Chen**, Xinyu Wang, Yong Jiang, Zhen Zhang, Xinyu Geng, Pengjun Xie, Fei Huang, Kewei Tu. In Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing (EMNLP)
+**Zhuo Chen**, Xinyu Wang, Yong Jiang, Zhen Zhang, Xinyu Geng, Pengjun Xie, Fei Huang, Kewei Tu. In Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing (EMNLP).
 
 - [Improving Retrieval Augmented Open-Domain Question-Answering with Vectorized Contexts](https://aclanthology.org/2024.findings-acl.458/).
-**Zhuo Chen**, Xinyu Wang, Yong Jiang, Pengjun Xie, Fei Huang, Kewei Tu. In Findings of the Association for Computational Linguistics (ACL)
+**Zhuo Chen**, Xinyu Wang, Yong Jiang, Pengjun Xie, Fei Huang, Kewei Tu. In Findings of the 2024 Annual Meeting of the Association for Computational Linguistics (ACL).
 
 - [Using Interpretation Methods for Model Enhancement](https://aclanthology.org/2023.emnlp-main.28/).
-**Zhuo Chen**, Chengyue Jiang, and Kewei Tu. In Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing (EMNLP)
+**Zhuo Chen**, Chengyue Jiang, Kewei Tu. In Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing (EMNLP).
 
 - [Repurposing Synthetic Data for Fine-grained Search Agent Supervision](https://arxiv.org/pdf/2510.24694).
-Yida Zhao, Kuan Li, Xixi Wu, Liwen Zhang, Dingchu Zhang, Baixuan Li, Maojia Song, **Zhuo Chen**, Chenxi Wang, Xinyu Wang, Kewei Tu, Pengjun Xie, Jingren Zhou, Yong Jiang. In Proceedings of the 2026 International Conference on Learning Representations (ICLR)
+Yida Zhao, Kuan Li, Xixi Wu, Liwen Zhang, Dingchu Zhang, Baixuan Li, Maojia Song, **Zhuo Chen**, Chenxi Wang, Xinyu Wang, Kewei Tu, Pengjun Xie, Jingren Zhou, Yong Jiang. In Proceedings of the 2026 International Conference on Learning Representations (ICLR).
 
 - [Incorporating Explicit and Implicit Chain-of-Thought as Hybrid Reasoning Paradigm with Guided Latent Space Modeling](https://openreview.net/pdf/04e41ea70b172dd7f34932ffcdbc263e9ff5ce21.pdf).
-Guangyu Li, Zhekai Ge, **Zhuo Chen**, Zhen Zhang, Xinyu Wang, Yong Jiang, Kewei Tu. In Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP)
+Guangyu Li, Zhekai Ge, **Zhuo Chen**, Zhen Zhang, Xinyu Wang, Yong Jiang, Kewei Tu. In Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP).
 
 - [KBM: Delineating Knowledge Boundary for Adaptive Retrieval in Large Language Models](https://aclanthology.org/2025.findings-emnlp.1188/).
-Zhen Zhang, Xinyu Wang, Yong Jiang, Zile Qiao, **Zhuo Chen**, Guangyu Li, Feiteng Mu, Mengting Hu, Pengjun Xie, Fei Huang. In Findings of the 2025 Conference on Empirical Methods in Natural Language Processing (EMNLP)
+Zhen Zhang, Xinyu Wang, Yong Jiang, Zile Qiao, **Zhuo Chen**, Guangyu Li, Feiteng Mu, Mengting Hu, Pengjun Xie, Fei Huang. In Findings of the 2025 Conference on Empirical Methods in Natural Language Processing (EMNLP).
 
 <!-- <div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1"> -->
@@ -93,20 +93,20 @@ Zhen Zhang, Xinyu Wang, Yong Jiang, Zile Qiao, **Zhuo Chen**, Guangyu Li, Feiten
 
 # 🎖 Honors and Awards
 
-- 2024-2025 ShanghaiTech Outstanding Student (Top 10%)
-- 2023-2024 ShanghaiTech Outstanding Student (Top 10%)
+- 2024–2025 ShanghaiTech Outstanding Student (Top 10%)
+- 2023–2024 ShanghaiTech Outstanding Student (Top 10%)
 - 2021 ShanghaiTech Outstanding Graduate (Top 10%)
-- 2019-2020 Third Prize of ShanghaiTech University Scholarship (Top 8%)
-- 2019-2020 Outstanding Student: For outstanding students who had contribution to the University (Top 10%)
+- 2019–2020 Third Prize of ShanghaiTech University Scholarship (Top 8%)
+- 2019–2020 Outstanding Student: For outstanding students who had contribution to the University (Top 10%)
 - 2019 MCM Meritorious Winner (Top 7.09%)
-- 2018-2019 Second Prize of ShanghaiTech University Scholarship (Top 5%)
+- 2018–2019 Second Prize of ShanghaiTech University Scholarship (Top 5%)
 
 
-# 📖 Educations
+# 📖 Education
 
-- *2026.4-now*, NTU, College of Computing and Data Science, Visiting Student advised by Bo An.
-- *2021-now*, ShanghaiTech University, Ph.D. advised by Prof. [Kewei Tu](https://faculty.sist.shanghaitech.edu.cn/faculty/tukw/).
-- *2017-2021*, ShanghaiTech University, B.S. in Computer Science.
+- *2026.04–present*, NTU, College of Computing and Data Science, Visiting Student advised by Bo An.
+- *2021–present*, ShanghaiTech University, Ph.D. advised by Prof. [Kewei Tu](https://faculty.sist.shanghaitech.edu.cn/faculty/tukw/).
+- *2017–2021*, ShanghaiTech University, B.S. in Computer Science.
 
 
 
@@ -117,5 +117,5 @@ Zhen Zhang, Xinyu Wang, Yong Jiang, Zile Qiao, **Zhuo Chen**, Guangyu Li, Feiten
 
 # 💻 Internships
 
-- *2026.04 - 2026.09*, Apodex, Research Intern.
-- *2023.08 - 2026.03*, Tongyi Lab, Alibaba (DAMO Academy previously).
+- *2026.04–2026.09*, Apodex, Research Intern.
+- *2023.08–2026.03*, Tongyi Lab, Alibaba (DAMO Academy previously).
