@@ -51,11 +51,11 @@ Liangcai Su\*, Zhaopeng Feng\*, **Zhuo Chen**\*, Zhen Zhang\*, Xiang Lin, Ruilin
 
 - [Tongyi DeepResearch Technical Report](https://arxiv.org/abs/2510.24701), [GitHub](https://github.com/Alibaba-NLP/DeepResearch) <span class="github-stars" data-repo="Alibaba-NLP/DeepResearch">20.1k</span> ⭐️.
 
-- [Dependency-Aware Trajectory Refinement for Efficient Multi-Turn Agent Fine-Tuning](https://arxiv.org/abs/2609.18417).
+- [Dependency-Aware Trajectory Refinement for Efficient Multi-Turn Agent Fine-Tuning](https://aclanthology.org/2026.findings-aacl.65/).
 **Zhuo Chen**, Zhen Zhang, Xinyu Wang, Kewei Tu. In Findings of the 2026 Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics (AACL).
 
-- [Efficient Multimodal Planning Agent for Visual Question-Answering](https://arxiv.org/abs/2601.20676).
-**Zhuo Chen**\*, Xinyu Geng\*, Xinyu Wang, Yong Jiang, Zhen Zhang, Pengjun Xie, Fei Huang, Kewei Tu. In Findings of the 2026 Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics (AACL).
+- [Efficient Multimodal Planning Agent for Visual Question-Answering](https://aclanthology.org/2026.findings-aacl.239/).
+**Zhuo Chen**\*, Xinyu Geng\*, Xinyu Wang, Yong Jiang, Zhen Zhang, Pengjun Xie, Kewei Tu. In Findings of the 2026 Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics (AACL).
 
 - [Argus: Evidence Assembly for Scalable Deep Research Agents](https://arxiv.org/abs/2605.16217).
 Zhen Zhang\*, Liangcai Su\*, **Zhuo Chen**\*, Xiang Lin, Haotian Xu, Kaiyu Yang, Bo An, Simon Du, Lidong Bing, Xinyu Wang.

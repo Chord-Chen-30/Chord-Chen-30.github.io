@@ -6,32 +6,68 @@ on:
     - cron: '0 8 * * *'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
+concurrency:
+  group: google-scholar-stats
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Install Reqs
+    - name: Checkout
+      uses: actions/checkout@v7
+
+    - name: Set up Python
+      uses: actions/setup-python@v7
+      with:
+        python-version: '3.11'
+        cache: pip
+        cache-dependency-path: google_scholar_crawler/requirements.txt
+
+    - name: Install dependencies
+      run: python -m pip install -r google_scholar_crawler/requirements.txt
+
+    - name: Fetch citation data
+      id: crawl
+      working-directory: google_scholar_crawler
       run: |
-        sudo apt-get install python3-setuptools
-    - name: Run
-      run: |
-        cd ./google_scholar_crawler
-        pip3 install -r requirements.txt
-        python3 main.py
-        cd ./results
-        git init
-        git config --local user.name "${GITHUB_ACTOR}"
-        export remote_repo="https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git"
-        git add *.json
-        git commit -m "Updated Citation Data"
-        git push "${remote_repo}" HEAD:google-scholar-stats --force
+        set +e
+        python main.py
+        status=$?
+        set -e
+
+        if [ "$status" -eq 75 ]; then
+          echo "updated=false" >> "$GITHUB_OUTPUT"
+          exit 0
+        fi
+        if [ "$status" -ne 0 ]; then
+          exit "$status"
+        fi
+
+        echo "updated=true" >> "$GITHUB_OUTPUT"
       env:
         GOOGLE_SCHOLAR_ID: ${{ secrets.GOOGLE_SCHOLAR_ID }}
+
+    - name: Publish citation data
+      if: steps.crawl.outputs.updated == 'true'
+      working-directory: google_scholar_crawler/results
+      run: |
+        git init
+        git config --local user.name "github-actions[bot]"
+        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        remote_repo="https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git"
+        git add -- *.json
+        git commit -m "Updated Citation Data"
+        git push "${remote_repo}" HEAD:google-scholar-stats --force
+
     # Do not commit a CDN hash to master: GITHUB_TOKEN pushes do not
     # trigger Pages, so the live HTML would keep serving an old pin.
     # The homepage now loads @google-scholar-stats; purge that URL here.
     - name: Purge jsDelivr CDN cache
+      if: steps.crawl.outputs.updated == 'true'
       run: |
         curl -fsS "https://purge.jsdelivr.net/gh/${GITHUB_REPOSITORY}@google-scholar-stats/gs_data.json"
         curl -fsS "https://purge.jsdelivr.net/gh/${GITHUB_REPOSITORY}@google-scholar-stats/gs_data_shieldsio.json"

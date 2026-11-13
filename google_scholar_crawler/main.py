@@ -5,8 +5,10 @@ import os
 import sys
 import time
 
-max_attempts = 10
-wait_seconds = 60
+# A retry may get a different free proxy, but long retry loops on the same
+# GitHub-hosted runner rarely recover once Scholar starts rejecting requests.
+max_attempts = 3
+wait_seconds = 30
 
 scholar_id = os.environ.get("GOOGLE_SCHOLAR_ID")
 if not scholar_id:
@@ -40,16 +42,17 @@ for attempt in range(1, max_attempts + 1):
             time.sleep(wait_seconds)
 else:
     print(
-        "\n"
-        "ERROR: Google Scholar crawl failed after "
+        "::warning title=Google Scholar temporarily unavailable::"
+        "The crawl failed after "
         f"{max_attempts} attempts (free proxies + scholarly).\n"
         f"Last error: {type(last_error).__name__}: {last_error}\n"
         "Likely cause: Google Scholar blocked the runner IP / free proxy died.\n"
-        "Site will keep the previous citation JSON until a later run succeeds.\n"
-        "This is expected to be occasional; re-run the workflow or wait for the next schedule.",
+        "The existing citation data will be kept and the next scheduled run will retry.",
         file=sys.stderr,
     )
-    sys.exit(1)
+    # EX_TEMPFAIL lets the workflow distinguish an unreliable upstream service
+    # from configuration or programming errors that should still fail the job.
+    sys.exit(os.EX_TEMPFAIL)
 
 if not isinstance(author, dict) or "name" not in author:
     print(
