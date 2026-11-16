@@ -1,12 +1,21 @@
-# City galleries
+# City galleries — quick update guide
 
-Put photos in the **source** project:
+From `apps/spidey-tracker/`, update photos like this:
 
+```bash
+# 1. Put originals in the matching place folder
+public/galleries/<city>__<country>/
+
+# 2. Compress/convert photos and refresh the gallery manifest
+npm run galleries:update
+
+# 3. Preview or build
+npm run dev
+# or: npm run build:gh-pages
 ```
-spidey-tracker-repro/public/galleries/<city>__<country>/
-```
 
-Rules:
+Folder rules:
+
 - lowercase
 - spaces → `-`
 - city and country separated by `__` (two underscores)
@@ -20,18 +29,19 @@ Examples:
 | New York, USA | `new-york__usa/` |
 | Shanghai, China | `shanghai__china/` |
 
-Supported in browser: `.jpg` `.jpeg` `.png` `.webp` `.gif` `.avif`  
-`.heic` / fake `*.HEIC.JPG` are OK in `public/galleries/` — `compress-gallery-images.py` / `sync-to-github.sh` convert them to `.jpg` via macOS `sips`.
+The folder name must match the `city` and `country` fields in
+`src/data/sightings.ts`; otherwise that pin will keep showing a placeholder.
 
-**Compress before deploy** (raw camera files can break GitHub Pages deploy by size/timeout):
+Browser formats: `.jpg` `.jpeg` `.png` `.webp` `.gif` `.avif`.
+HEIC files (including fake `*.HEIC.JPG`) are converted to JPEG by macOS `sips`.
+Install Pillow once if needed:
 
 ```bash
-# from spidey-tracker-repro/
-python3 scripts/compress-gallery-images.py public/galleries --dry-run
-python3 scripts/compress-gallery-images.py public/galleries
-# full flag docs: see ../README.md (or deployed spidey-tracker/README.md)
+python3 -m pip install pillow
 ```
 
-Sorted by filename (`01.jpg`, `02.jpg`, …).  
-After adding images locally, restart/refresh the Vite app so the gallery list updates.  
-To show on github.io: rebuild + push (copying only into the Pages repo is not enough for new filenames).
+`npm run galleries:update` resizes large images to a 1600 px longest edge,
+uses JPEG quality 85, converts HEIC, and rewrites
+`src/data/gallery-manifest.json`. Files are displayed in natural filename order
+(`2.jpg` before `10.jpg`). Regular builds also refresh the manifest, but do not
+compress originals, so run the update command before committing new photos.

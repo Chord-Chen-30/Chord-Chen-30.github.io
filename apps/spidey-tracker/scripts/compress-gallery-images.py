@@ -15,6 +15,7 @@ Depends on Pillow:
 from __future__ import annotations
 
 import argparse
+import json
 import re
 import shutil
 import subprocess
@@ -25,10 +26,45 @@ from pathlib import Path
 try:
     from PIL import Image, ImageOps, UnidentifiedImageError
 except ImportError:
-    print("Pillow is required. Install with:  pip install pillow", file=sys.stderr)
-    sys.exit(1)
+    Image = ImageOps = UnidentifiedImageError = None  # type: ignore[assignment]
 
 IMAGE_SUFFIXES = {".jpg", ".jpeg", ".png", ".webp", ".tif", ".tiff", ".heic", ".heif"}
+MANIFEST_IMAGE_SUFFIXES = {".jpg", ".jpeg", ".png", ".webp", ".gif", ".avif"}
+
+
+def natural_key(value: str) -> list[object]:
+    """Sort 2.jpg before 10.jpg, matching the Vite gallery plugin."""
+    return [int(part) if part.isdigit() else part.casefold() for part in re.split(r"(\d+)", value)]
+
+
+def gallery_manifest(root: Path) -> dict[str, list[str]]:
+    manifest: dict[str, list[str]] = {}
+    for folder in sorted((p for p in root.iterdir() if p.is_dir() and not p.name.startswith("."))):
+        files = sorted(
+            (
+                p.name
+                for p in folder.iterdir()
+                if p.is_file()
+                and not p.name.startswith(".")
+                and p.suffix.lower() in MANIFEST_IMAGE_SUFFIXES
+            ),
+            key=natural_key,
+        )
+        if files:
+            manifest[folder.name] = [f"galleries/{folder.name}/{name}" for name in files]
+    return manifest
+
+
+def write_gallery_manifest(root: Path, destination: Path) -> None:
+    manifest = gallery_manifest(root)
+    content = json.dumps(manifest, ensure_ascii=False, indent=2) + "\n"
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    if destination.exists() and destination.read_text(encoding="utf-8") == content:
+        print(f"Gallery manifest is current: {destination}")
+        return
+    destination.write_text(content, encoding="utf-8")
+    photo_count = sum(len(files) for files in manifest.values())
+    print(f"Updated gallery manifest: {destination} ({len(manifest)} places, {photo_count} photos)")
 
 
 def human(n: float) -> str:
@@ -120,7 +156,8 @@ def compress_one(
 
     w, h = im.size
     scale = min(1.0, max_edge / max(w, h))
-    if scale < 1.0:
+    resized = scale < 1.0
+    if resized:
         im = im.resize((max(1, int(w * scale)), max(1, int(h * scale))), Image.Resampling.LANCZOS)
 
     out_path = jpeg_out_path(path)
@@ -131,13 +168,18 @@ def compress_one(
         buf = BytesIO()
         im.save(buf, format="JPEG", quality=quality, optimize=True, progressive=True)
         after = buf.tell()
-        return before, after, "changed" if (after < before or out_path != path) else "skip"
+        worth_writing = force_convert or resized or after < before * 0.98
+        return before, after, "changed" if worth_writing else "skip"
 
     tmp = out_path.with_suffix(out_path.suffix + ".tmp")
     im.save(tmp, format="JPEG", quality=quality, optimize=True, progressive=True)
     after = tmp.stat().st_size
 
-    if after >= before and out_path == path and not force_convert:
+    # Re-encoding an already optimized JPEG can shave a few bytes every run.
+    # Require meaningful savings unless conversion or resizing is necessary,
+    # so `galleries:update` stays idempotent and does not churn photo files.
+    worth_writing = force_convert or resized or after < before * 0.98
+    if not worth_writing and out_path == path:
         tmp.unlink(missing_ok=True)
         return before, before, "skip"
 
@@ -183,6 +225,16 @@ def main() -> int:
         action="store_true",
         help="Show estimated savings without writing files",
     )
+    parser.add_argument(
+        "--manifest",
+        type=Path,
+        help="Write the browser gallery manifest after processing images",
+    )
+    parser.add_argument(
+        "--manifest-only",
+        action="store_true",
+        help="Only refresh the gallery manifest (does not require Pillow)",
+    )
     args = parser.parse_args()
 
     if not (1 <= args.quality <= 95):
@@ -192,6 +244,18 @@ def main() -> int:
     root = Path(args.root).expanduser().resolve()
     if not root.is_dir():
         print(f"Not a directory: {root}", file=sys.stderr)
+        return 2
+
+    manifest_path = args.manifest.expanduser().resolve() if args.manifest else None
+    if args.manifest_only:
+        if not manifest_path:
+            print("--manifest-only requires --manifest", file=sys.stderr)
+            return 2
+        write_gallery_manifest(root, manifest_path)
+        return 0
+
+    if Image is None:
+        print("Pillow is required. Install with:  python3 -m pip install pillow", file=sys.stderr)
         return 2
 
     files = collect(root)
@@ -235,6 +299,8 @@ def main() -> int:
         + f". Total {human(total_before)} → {human(total_after)}"
         + (" (estimated)" if args.dry_run else "")
     )
+    if manifest_path and not args.dry_run and not error_n:
+        write_gallery_manifest(root, manifest_path)
     return 1 if error_n else 0
 
 

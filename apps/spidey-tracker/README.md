@@ -27,6 +27,21 @@ npm run dev
 The GitHub Pages workflow builds this app with the `/spidey-tracker/` base path
 whenever `master` is updated. Do not commit `dist/`; it is a generated artifact.
 
+## Updating gallery photos
+
+Put photos in `public/galleries/<city>__<country>/`, then run:
+
+```bash
+npm run galleries:update
+npm run dev
+```
+
+The first command compresses large images, converts HEIC where possible, and
+refreshes `src/data/gallery-manifest.json`. See
+[`public/galleries/README.md`](public/galleries/README.md) for folder naming and
+the short workflow. Builds refresh the manifest automatically so stale file
+lists cannot hide newly committed photos.
+
 ## What’s included
 
 - Intro screen (sound on/off → boot → map)

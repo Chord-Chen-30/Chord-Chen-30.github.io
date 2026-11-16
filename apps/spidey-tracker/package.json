@@ -5,9 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "npm run galleries:manifest",
     "build": "tsc && vite build",
+    "prebuild:gh-pages": "npm run galleries:manifest",
     "build:gh-pages": "tsc && VITE_BASE=/spidey-tracker/ vite build",
     "compress:galleries": "python3 scripts/compress-gallery-images.py public/galleries",
+    "galleries:manifest": "python3 scripts/compress-gallery-images.py public/galleries --manifest src/data/gallery-manifest.json --manifest-only",
+    "galleries:update": "python3 scripts/compress-gallery-images.py public/galleries --manifest src/data/gallery-manifest.json",
     "preview": "vite preview"
   },
   "devDependencies": {
